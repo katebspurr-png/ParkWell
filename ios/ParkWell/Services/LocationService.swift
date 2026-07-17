@@ -1,0 +1,81 @@
+import Combine
+import CoreLocation
+import Foundation
+
+/// Wraps CLLocationManager and publishes locations while the user drives.
+///
+/// Battery strategy (see docs/ARCHITECTURE.md): high-accuracy navigation
+/// updates only while inside the mapped coverage area; drop to
+/// significant-location-change monitoring outside it, so cruising around
+/// Bedford doesn't burn the battery for zones we haven't mapped.
+final class LocationService: NSObject, ObservableObject {
+    @Published private(set) var location: CLLocation?
+    @Published private(set) var authorizationStatus: CLAuthorizationStatus = .notDetermined
+
+    private let manager = CLLocationManager()
+
+    /// Rough bounding box around zones B, C, H (downtown Halifax + Dartmouth
+    /// core). Cheap containment check — precise matching is SegmentMatcher's job.
+    private let coverageArea = (minLat: 44.630, maxLat: 44.680, minLon: -63.610, maxLon: -63.550)
+
+    override init() {
+        super.init()
+        manager.delegate = self
+        manager.activityType = .automotiveNavigation
+        manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        manager.distanceFilter = 10
+        manager.pausesLocationUpdatesAutomatically = true
+    }
+
+    func requestAuthorization() {
+        manager.requestWhenInUseAuthorization()
+    }
+
+    func startTracking() {
+        manager.allowsBackgroundLocationUpdates = authorizationStatus == .authorizedAlways
+        manager.startUpdatingLocation()
+    }
+
+    func stopTracking() {
+        manager.stopUpdatingLocation()
+        manager.stopMonitoringSignificantLocationChanges()
+    }
+
+    func isInCoverageArea(_ coordinate: CLLocationCoordinate2D) -> Bool {
+        coordinate.latitude >= coverageArea.minLat && coordinate.latitude <= coverageArea.maxLat
+            && coordinate.longitude >= coverageArea.minLon && coordinate.longitude <= coverageArea.maxLon
+    }
+
+    private func adjustPowerMode(for coordinate: CLLocationCoordinate2D) {
+        if isInCoverageArea(coordinate) {
+            if manager.desiredAccuracy != kCLLocationAccuracyBestForNavigation {
+                manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+                manager.startUpdatingLocation()
+                manager.stopMonitoringSignificantLocationChanges()
+            }
+        } else if manager.desiredAccuracy == kCLLocationAccuracyBestForNavigation {
+            manager.desiredAccuracy = kCLLocationAccuracyKilometer
+            manager.startMonitoringSignificantLocationChanges()
+        }
+    }
+}
+
+extension LocationService: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        authorizationStatus = manager.authorizationStatus
+        if authorizationStatus == .authorizedWhenInUse || authorizationStatus == .authorizedAlways {
+            startTracking()
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let latest = locations.last else { return }
+        location = latest
+        adjustPowerMode(for: latest.coordinate)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // Transient GPS failures are routine downtown; keep the last fix and
+        // let staleness handling in the UI cover extended outages.
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>ParkWell Sign Mapper</title>
+<style>
+  /* Internal data-entry tool for walking zones B/C/H: tap a rule type at each
+     sign, it records GPS + timestamp; export JSON at the end of the walk. */
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 0; padding: 16px;
+         max-width: 480px; margin-inline: auto; }
+  h1 { font-size: 1.2rem; }
+  #status { font-size: .85rem; color: gray; min-height: 1.2em; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+  button { padding: 18px 8px; font-size: 1rem; border-radius: 12px; border: 1px solid #8884;
+           background: #8881; cursor: pointer; }
+  button:active { background: #8883; }
+  button.wide { grid-column: 1 / -1; }
+  input, textarea { width: 100%; box-sizing: border-box; padding: 10px; border-radius: 8px;
+                    border: 1px solid #8884; font-size: 1rem; margin-bottom: 8px; }
+  #log { font-size: .8rem; max-height: 30vh; overflow-y: auto; border-top: 1px solid #8884;
+         padding-top: 8px; }
+  .entry { padding: 4px 0; border-bottom: 1px solid #8882; }
+  .actions { display: flex; gap: 10px; margin-top: 12px; }
+  .actions button { flex: 1; padding: 12px; }
+</style>
+</head>
+<body>
+<h1>ParkWell Sign Mapper</h1>
+<p id="status">Waiting for GPS…</p>
+
+<input id="street" placeholder="Street name (persists between taps)">
+<input id="zone" placeholder="Zone (B / C / H)" maxlength="2">
+<input id="side" placeholder="Side (north/south/east/west)">
+<textarea id="note" placeholder="Sign text / notes (e.g. '2HR 8AM-6PM MON-SAT')" rows="2"></textarea>
+
+<div class="grid">
+  <button data-kind="paid">Paid</button>
+  <button data-kind="time_limited">Time limited</button>
+  <button data-kind="permit_only">Permit only</button>
+  <button data-kind="loading_zone">Loading zone</button>
+  <button data-kind="no_stopping">No stopping</button>
+  <button data-kind="accessible">Accessible</button>
+  <button data-kind="free" class="wide">Free / no sign</button>
+</div>
+
+<div class="actions">
+  <button id="export">Export JSON</button>
+  <button id="clear">Clear all</button>
+</div>
+
+<div id="log"></div>
+
+<script>
+  const KEY = "parkwell-sign-entries";
+  let lastPosition = null;
+  const entries = JSON.parse(localStorage.getItem(KEY) || "[]");
+
+  navigator.geolocation.watchPosition(
+    (pos) => {
+      lastPosition = pos;
+      document.getElementById("status").textContent =
+        `GPS ±${Math.round(pos.coords.accuracy)} m · ${entries.length} signs recorded`;
+    },
+    () => { document.getElementById("status").textContent = "GPS unavailable — enable location access"; },
+    { enableHighAccuracy: true }
+  );
+
+  function render() {
+    document.getElementById("log").innerHTML = entries.slice(-30).reverse().map((e) =>
+      `<div class="entry"><b>${e.kind}</b> · ${e.street || "?"} ${e.side || ""} ` +
+      `· ±${Math.round(e.accuracy)} m · ${e.note || ""}</div>`
+    ).join("");
+  }
+
+  document.querySelectorAll("button[data-kind]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!lastPosition) { alert("No GPS fix yet."); return; }
+      entries.push({
+        kind: btn.dataset.kind,
+        latitude: lastPosition.coords.latitude,
+        longitude: lastPosition.coords.longitude,
+        accuracy: lastPosition.coords.accuracy,
+        street: document.getElementById("street").value.trim(),
+        zone: document.getElementById("zone").value.trim().toUpperCase(),
+        side: document.getElementById("side").value.trim().toLowerCase(),
+        note: document.getElementById("note").value.trim(),
+        recorded_at: new Date().toISOString(),
+      });
+      localStorage.setItem(KEY, JSON.stringify(entries));
+      document.getElementById("note").value = "";
+      if (navigator.vibrate) navigator.vibrate(60);
+      document.getElementById("status").textContent = `Recorded ${btn.dataset.kind} · ${entries.length} total`;
+      render();
+    });
+  });
+
+  document.getElementById("export").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify(entries, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `parkwell-signs-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+  });
+
+  document.getElementById("clear").addEventListener("click", () => {
+    if (confirm(`Delete all ${entries.length} recorded signs?`)) {
+      entries.length = 0;
+      localStorage.removeItem(KEY);
+      render();
+    }
+  });
+
+  render();
+</script>
+</body>
+</html>

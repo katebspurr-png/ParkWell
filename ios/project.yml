@@ -1,0 +1,78 @@
+# XcodeGen project definition — run `xcodegen generate` in this directory to
+# produce ParkWell.xcodeproj (the .xcodeproj itself is gitignored).
+name: ParkWell
+options:
+  bundleIdPrefix: com.parkwell
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 0.1.0
+
+targets:
+  ParkWell:
+    type: application
+    platform: iOS
+    sources:
+      - path: ParkWell
+      - path: Shared
+    dependencies:
+      - target: ParkWellWidgets
+        embed: true
+    info:
+      path: ParkWell/Info.plist
+      properties:
+        CFBundleDisplayName: ParkWell
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSSupportsLiveActivities: true
+        UIBackgroundModes: [location, audio]
+        NSLocationWhenInUseUsageDescription: >-
+          ParkWell uses your location to show whether the street you're
+          passing is legal to park on right now.
+        NSLocationAlwaysAndWhenInUseUsageDescription: >-
+          Background location keeps parking status and audio cues working
+          while you drive with the screen off. Your location is processed
+          on-device and never stored on our servers.
+        NSCameraUsageDescription: >-
+          The camera is used to photograph a parking sign so ParkWell can
+          explain it in plain English.
+        NSPhotoLibraryUsageDescription: >-
+          Choose an existing photo of a parking sign for interpretation.
+
+  ParkWellWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: ParkWellWidgets
+      - path: Shared
+    info:
+      path: ParkWellWidgets/Info.plist
+      properties:
+        CFBundleDisplayName: ParkWell
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        SKIP_INSTALL: true
+
+  ParkWellTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ParkWellTests
+    dependencies:
+      - target: ParkWell
+
+schemes:
+  ParkWell:
+    build:
+      targets:
+        ParkWell: all
+    test:
+      targets:
+        - ParkWellTests

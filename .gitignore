@@ -1,0 +1,26 @@
+# Xcode
+*.xcodeproj/
+!*.xcodeproj/project.pbxproj
+xcuserdata/
+DerivedData/
+build/
+*.xcresult
+
+# XcodeGen generates the project; keep only project.yml in git
+ios/ParkWell.xcodeproj/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Supabase local dev
+supabase/.temp/
+supabase/.branches/
+
+# Secrets — never commit real keys
+*.env
+.env.*
+ios/ParkWell/Config.local.swift
+
+# macOS
+.DS_Store
