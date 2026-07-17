@@ -81,9 +81,11 @@ schemes:
       targets:
         ParkWell: all
     run:
+      # Location simulation stays opt-in: pick SimulatedDrives/
+      # BarringtonDrive.gpx from Debug ▸ Simulate Location when you want the
+      # fake downtown drive; real GPS otherwise.
       simulateLocation:
         allow: true
-        defaultLocation: SimulatedDrives/BarringtonDrive.gpx
     test:
       targets:
         - ParkWellTests
