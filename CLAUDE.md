@@ -2,6 +2,34 @@
 
 Rules for any Claude session (local CLI or remote) working in this repo.
 
+## Which agent for which work
+
+Two agents share this project: the **local CLI** (Kate's Mac — can build,
+run the simulator, use the keychain) and **remote sessions** (web/mobile —
+can research, run the data pipeline, review). Kate: read this when deciding
+who to hand a task to. Agents: if a task fits the other column better, say
+so instead of attempting it badly.
+
+**Local CLI** — anything that must *run* to be trusted:
+- Building in Xcode, simulator/device runs, UI work needing eyes on screen
+- Debugging that needs reproduction (rendering, layout, install errors)
+- Anything using the Mac keychain or local credentials (db password,
+  signing, `supabase` CLI auth)
+
+**Remote session** — anything that's *research, data, or judgment*:
+- Web research, dataset discovery, scraping, API probing
+- The HRM import pipeline, SQL/migrations, backend design
+- Writing specs/issues, reviewing PRs, architecture decisions
+- Work started from the phone or away from the Mac
+
+**Either:** docs, small pure-logic changes with test coverage, edge
+functions.
+
+Rule of thumb: **spec remotely, build locally, review remotely.** If it
+needs to be run to be trusted, it's a CLI job; if it needs to be looked up
+or judged, it's a remote job. UI code written remotely must be flagged as
+unverified in the PR so a local session can smoke-test it.
+
 ## Git workflow
 
 - `main` is the reviewed trunk. **Never commit or push directly to `main`.**
