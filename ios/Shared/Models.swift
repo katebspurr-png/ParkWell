@@ -112,6 +112,27 @@ struct PayStation: Codable, Hashable, Identifiable {
     var longitude: Double
 }
 
+/// One span of a zone's weekday time-of-day demand pricing,
+/// [startMinute, endMinute) after local midnight. HRM's rates change through
+/// the day, so a zone carries a schedule, never a single hourly figure.
+struct ZoneRateWindow: Codable, Hashable {
+    var startMinute: Int
+    var endMinute: Int
+    var rateCents: Int
+}
+
+extension Array where Element == ZoneRateWindow {
+    /// The rate in effect at `date`. Weekdays only — the schedule describes
+    /// Monday–Friday pricing and must not be applied to Saturday sessions
+    /// (downtown Saturdays have their own flat pricing, not modeled yet).
+    func rateCents(at date: Date, calendar: Calendar) -> Int? {
+        let weekday = calendar.component(.weekday, from: date)
+        guard (2...6).contains(weekday) else { return nil }
+        let minute = calendar.component(.hour, from: date) * 60 + calendar.component(.minute, from: date)
+        return first { minute >= $0.startMinute && minute < $0.endMinute }?.rateCents
+    }
+}
+
 /// The dynamic overlay layer — changes daily/seasonally, fetched live.
 struct DynamicOverlays: Codable, Hashable {
     var winterBanActive: Bool

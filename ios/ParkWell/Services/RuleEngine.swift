@@ -9,6 +9,9 @@ struct Verdict: Equatable {
     /// Phrased for text-to-speech, e.g. "Legal, no time limit."
     var spoken: String
     var isStale: Bool
+    /// The zone's rate right now, set only on paid verdicts whose zone has a
+    /// verified schedule — nil means unknown-but-paid, never a guessed price.
+    var hourlyRateCents: Int?
 }
 
 /// Pure, synchronous resolution of segment + overlays + time into a Verdict.
@@ -30,7 +33,8 @@ struct RuleEngine {
     }
 
     func verdict(segment: StreetSegment?, overlays: DynamicOverlays?,
-                 nearestPayStation: PayStation? = nil, at date: Date) -> Verdict {
+                 nearestPayStation: PayStation? = nil,
+                 zoneRates: [String: [ZoneRateWindow]] = [:], at date: Date) -> Verdict {
         let stale = isStale(overlays: overlays, at: date)
 
         guard let segment else {
@@ -109,7 +113,10 @@ struct RuleEngine {
         if let paid = active.first(where: { $0.kind == .paid }) {
             let until = paid.activeWindowEndMinute(at: date, calendar: calendar).map(clockString) ?? ""
             let zone = segment.zoneCode.map { "Zone \($0)" } ?? "Paid"
-            var detail = "\(segment.streetName) · \(zone)" + (until.isEmpty ? "" : " · until \(until)")
+            let rate = segment.zoneCode.flatMap { zoneRates[$0]?.rateCents(at: date, calendar: calendar) }
+            var detail = "\(segment.streetName) · \(zone)"
+            if let rate { detail += " · \(Self.dollarString(rate))/hr" }
+            if !until.isEmpty { detail += " · until \(until)" }
             if let station = nearestPayStation {
                 detail += " · Pay station \(station.tid)"
             }
@@ -118,7 +125,8 @@ struct RuleEngine {
                 headline: "Paid parking",
                 detail: detail,
                 spoken: until.isEmpty ? "Paid parking." : "Paid parking until \(until).",
-                isStale: stale
+                isStale: stale,
+                hourlyRateCents: rate
             ), banDeclared: banDeclared)
         }
         if let limited = active.first(where: { $0.kind == .timeLimited }), let limit = limited.timeLimitMinutes {
@@ -172,6 +180,10 @@ struct RuleEngine {
     func isStale(overlays: DynamicOverlays?, at date: Date) -> Bool {
         guard let overlays else { return true }
         return date.timeIntervalSince(overlays.fetchedAt) > overlayStaleThreshold
+    }
+
+    static func dollarString(_ cents: Int) -> String {
+        String(format: "$%.2f", Double(cents) / 100)
     }
 
     private func clockString(_ minuteOfDay: Int) -> String {

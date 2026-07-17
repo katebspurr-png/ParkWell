@@ -22,6 +22,20 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
 
+                Section("Parking suggestions") {
+                    Picker("When you can't park here, suggest", selection: $model.preferenceRaw) {
+                        ForEach(ParkingPreference.allCases) { preference in
+                            Text(preference.label).tag(preference.rawValue)
+                        }
+                    }
+                    .pickerStyle(.inline)
+                    .labelsHidden()
+
+                    Text("Free only sticks to streets with no charge. Cheapest first ranks paid streets by zone rate; lots and garages come last. Nearest is pure distance.")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+
                 Section("CarPlay") {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("See your parking status on the car screen")

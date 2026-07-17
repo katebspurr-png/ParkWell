@@ -238,4 +238,51 @@ final class RuleEngineTests: XCTestCase {
         let verdict = engine.verdict(segment: paidSegment(), overlays: freshOverlays(at: now), at: now)
         XCTAssertFalse(verdict.isStale)
     }
+
+    // MARK: - Zone rates
+
+    /// Zone C's verified schedule: $3.25 early, $4.75 11 a.m.–2 p.m., $1.50 after 5.
+    private func zoneCRates() -> [String: [ZoneRateWindow]] {
+        ["C": [
+            ZoneRateWindow(startMinute: 480, endMinute: 660, rateCents: 325),
+            ZoneRateWindow(startMinute: 660, endMinute: 840, rateCents: 475),
+            ZoneRateWindow(startMinute: 840, endMinute: 1020, rateCents: 325),
+            ZoneRateWindow(startMinute: 1020, endMinute: 1080, rateCents: 150),
+        ]]
+    }
+
+    func testPaidVerdictShowsCurrentZoneRate() {
+        // Wednesday noon falls in the $4.75 peak window.
+        let now = date(2026, 7, 15, 12, 0)
+        let verdict = engine.verdict(segment: paidSegment(), overlays: nil,
+                                     zoneRates: zoneCRates(), at: now)
+        XCTAssertEqual(verdict.hourlyRateCents, 475)
+        XCTAssertTrue(verdict.detail.contains("$4.75/hr"), verdict.detail)
+    }
+
+    func testPaidVerdictRateFollowsTimeOfDay() {
+        let now = date(2026, 7, 15, 9, 0)
+        let verdict = engine.verdict(segment: paidSegment(), overlays: nil,
+                                     zoneRates: zoneCRates(), at: now)
+        XCTAssertEqual(verdict.hourlyRateCents, 325)
+    }
+
+    func testPaidVerdictWithoutScheduleShowsNoNumber() {
+        // Unknown-but-paid: never a fabricated price.
+        let now = date(2026, 7, 15, 12, 0)
+        let verdict = engine.verdict(segment: paidSegment(), overlays: nil,
+                                     zoneRates: [:], at: now)
+        XCTAssertNil(verdict.hourlyRateCents)
+        XCTAssertFalse(verdict.detail.contains("$"), verdict.detail)
+    }
+
+    func testSaturdayPaidVerdictShowsNoWeekdayRate() {
+        // Saturday paid parking is active (post 2026-07-18) but the weekday
+        // schedule must not price it.
+        let now = date(2026, 7, 25, 12, 0)
+        let verdict = engine.verdict(segment: paidSegment(), overlays: nil,
+                                     zoneRates: zoneCRates(), at: now)
+        XCTAssertEqual(verdict.level, .yellow)
+        XCTAssertNil(verdict.hourlyRateCents)
+    }
 }
