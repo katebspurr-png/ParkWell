@@ -12,46 +12,22 @@ struct CoverageMapView: View {
     @State private var levels: [UUID: StatusLevel] = [:]
     private let engine = RuleEngine()
 
-    /// Downtown Halifax, for when there's no location fix yet.
-    private let fallbackRegion = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 44.6488, longitude: -63.5752),
-        span: MKCoordinateSpan(latitudeDelta: 0.06, longitudeDelta: 0.06)
-    )
-
     var body: some View {
         NavigationStack {
-            Map(initialPosition: .userLocation(fallback: .region(fallbackRegion))) {
-                UserAnnotation()
-
-                ForEach(model.segments) { segment in
-                    MapPolyline(coordinates: segment.polyline.map {
-                        CLLocationCoordinate2D(latitude: $0.latitude, longitude: $0.longitude)
-                    })
-                    .stroke(color(for: levels[segment.id] ?? .unknown), lineWidth: 4)
+            CoverageMapRepresentable(segments: model.segments,
+                                     levels: levels,
+                                     payStations: model.payStations)
+                .overlay(alignment: .bottom) {
+                    legend
                 }
-
-                ForEach(model.payStations) { station in
-                    MapCircle(center: CLLocationCoordinate2D(latitude: station.latitude,
-                                                             longitude: station.longitude),
-                              radius: 6)
-                        .foregroundStyle(.purple)
+                .navigationTitle("Coverage")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    Button("Done") { dismiss() }
                 }
-            }
-            .mapControls {
-                MapUserLocationButton()
-                MapCompass()
-            }
-            .overlay(alignment: .bottom) {
-                legend
-            }
-            .navigationTitle("Coverage")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                Button("Done") { dismiss() }
-            }
-            .task(id: model.segments.count) {
-                recomputeLevels()
-            }
+                .task(id: model.segments.count) {
+                    recomputeLevels()
+                }
         }
     }
 
@@ -87,14 +63,96 @@ struct CoverageMapView: View {
             Text(label)
         }
     }
+}
 
-    private func color(for level: StatusLevel) -> Color {
-        switch level {
-        case .green: return .green
-        case .likelyFree: return .green.opacity(0.45)
-        case .yellow: return .yellow
-        case .red: return .red
-        case .unknown: return .gray
+/// SwiftUI's `Map` silently stops rendering once its content builder holds a
+/// few thousand items — at citywide scale (~7k segments) the map comes up
+/// blank. `MKMapView` + `MKMultiPolyline` batches all segments of one status
+/// into a single overlay, so the whole city is five overlays instead of 7k.
+private struct CoverageMapRepresentable: UIViewRepresentable {
+    var segments: [StreetSegment]
+    var levels: [UUID: StatusLevel]
+    var payStations: [PayStation]
+
+    /// Downtown Halifax, for when there's no location fix yet.
+    private static let fallbackRegion = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 44.6488, longitude: -63.5752),
+        span: MKCoordinateSpan(latitudeDelta: 0.06, longitudeDelta: 0.06)
+    )
+
+    func makeUIView(context: Context) -> MKMapView {
+        let map = MKMapView()
+        map.delegate = context.coordinator
+        map.showsUserLocation = true
+        map.region = Self.fallbackRegion
+        return map
+    }
+
+    func updateUIView(_ map: MKMapView, context: Context) {
+        // Overlays only change when data loads or levels are recomputed.
+        let signature = segments.count &* 31 &+ levels.count &* 7 &+ payStations.count
+        guard context.coordinator.signature != signature else { return }
+        context.coordinator.signature = signature
+
+        map.removeOverlays(map.overlays)
+
+        var grouped: [StatusLevel: [MKPolyline]] = [:]
+        for segment in segments {
+            var coords = segment.polyline.map {
+                CLLocationCoordinate2D(latitude: $0.latitude, longitude: $0.longitude)
+            }
+            guard coords.count >= 2 else { continue }
+            let polyline = MKPolyline(coordinates: &coords, count: coords.count)
+            grouped[levels[segment.id] ?? .unknown, default: []].append(polyline)
+        }
+        for (level, lines) in grouped {
+            let multi = LevelMultiPolyline(lines)
+            multi.level = level
+            map.addOverlay(multi, level: .aboveRoads)
+        }
+
+        for station in payStations {
+            let circle = MKCircle(center: CLLocationCoordinate2D(latitude: station.latitude,
+                                                                 longitude: station.longitude),
+                                  radius: 6)
+            map.addOverlay(circle, level: .aboveRoads)
+        }
+    }
+
+    func makeCoordinator() -> Coordinator { Coordinator() }
+
+    final class Coordinator: NSObject, MKMapViewDelegate {
+        var signature = -1
+
+        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            if let multi = overlay as? LevelMultiPolyline {
+                let renderer = MKMultiPolylineRenderer(multiPolyline: multi)
+                renderer.strokeColor = multi.level.mapColor
+                renderer.lineWidth = 4
+                return renderer
+            }
+            if let circle = overlay as? MKCircle {
+                let renderer = MKCircleRenderer(circle: circle)
+                renderer.fillColor = .systemPurple
+                return renderer
+            }
+            return MKOverlayRenderer(overlay: overlay)
+        }
+    }
+}
+
+private final class LevelMultiPolyline: MKMultiPolyline {
+    var level: StatusLevel = .unknown
+}
+
+private extension StatusLevel {
+    var mapColor: UIColor {
+        switch self {
+        case .green: return .systemGreen
+        case .likelyFree: return .systemGreen.withAlphaComponent(0.45)
+        case .yellow: return .systemYellow
+        case .red: return .systemRed
+        case .unknown: return .systemGray
         }
     }
 }

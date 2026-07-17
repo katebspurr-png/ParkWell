@@ -74,6 +74,11 @@ struct ContentView: View {
                     showingWelcome = true
                     hasSeenWelcome = true
                 }
+                // Automation hook: `simctl launch <udid> com.parkwell.ParkWell -showCoverageMap`
+                if ProcessInfo.processInfo.arguments.contains("-showCoverageMap") {
+                    showingWelcome = false
+                    showingMap = true
+                }
             }
             .sheet(isPresented: $showingWelcome) {
                 WelcomeView()

@@ -269,6 +269,7 @@ def main() -> None:
     # ── Centerlines -> unverified "likely OK" segments ──────────────────
     out.append("")
     n_centerline = 0
+    seen_centerline_ids: set[str] = set()
     for feat in centerlines:
         props = feat["properties"]
         name = street_title(props.get("FULL_NAME"))
@@ -279,6 +280,13 @@ def main() -> None:
             if len(path) < 2:
                 continue
             source_id = f"centerline:{asset}:{i}"
+            # HRM asset ids are occasionally shared by distinct streets;
+            # disambiguate deterministically so stable_id stays unique.
+            n_dup = 0
+            while source_id in seen_centerline_ids:
+                n_dup += 1
+                source_id = f"centerline:{asset}:{i}:dup{n_dup}"
+            seen_centerline_ids.add(source_id)
             polyline = json.dumps(latlon_polyline(path), separators=(",", ":"))
             out.append(
                 f"insert into street_segments (id, city_code, zone_code, street_name, side, polyline, source, source_id, verified) values "
