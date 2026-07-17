@@ -6,8 +6,15 @@ DerivedData/
 build/
 *.xcresult
 
-# XcodeGen generates the project; keep only project.yml in git
+# XcodeGen generates the project and Info.plists; keep only project.yml in git
 ios/ParkWell.xcodeproj/
+ios/ParkWell/Info.plist
+ios/ParkWellWidgets/Info.plist
+
+# Local agent tooling artifacts (Claude Code sessions)
+.agents/
+skills-lock.json
+ios/supabase/
 
 # Swift Package Manager
 .build/
