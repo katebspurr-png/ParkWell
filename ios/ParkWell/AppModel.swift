@@ -1,6 +1,7 @@
 import Combine
 import CoreLocation
 import Foundation
+import MapKit
 
 /// Central coordinator: location → segment match → verdict → surfaces.
 ///
@@ -19,11 +20,15 @@ final class AppModel: ObservableObject {
     @Published var cueStyleRaw: String {
         didSet { UserDefaults.standard.set(cueStyleRaw, forKey: "cueStyle") }
     }
+    @Published var preferenceRaw: String {
+        didSet { UserDefaults.standard.set(preferenceRaw, forKey: "parkingPreference") }
+    }
 
     let locationService = LocationService()
     private let repository = RulesRepository()
     private let matcher = SegmentMatcher()
     private let engine = RuleEngine()
+    private let suggestionEngine = SuggestionEngine()
     private let audio = AudioCueService()
     private let liveActivity = LiveActivityController()
 
@@ -31,15 +36,32 @@ final class AppModel: ObservableObject {
     @Published private(set) var segments: [StreetSegment] = []
     @Published private(set) var payStations: [PayStation] = []
     @Published private(set) var overlays: DynamicOverlays?
+    private var zoneRates: [String: [ZoneRateWindow]] = [:]
     private var overlayRefreshTask: Task<Void, Never>?
+
+    /// Nearby garages/lots from MapKit local search. On-device only — never
+    /// sent to the backend (Apple ToS).
+    private struct Garage {
+        var name: String
+        var latitude: Double
+        var longitude: Double
+    }
+    private var garages: [Garage] = []
+    private var lastGarageSearchLocation: CLLocation?
 
     var cueStyle: AudioCueService.CueStyle {
         AudioCueService.CueStyle(rawValue: cueStyleRaw) ?? .spoken
     }
 
+    var preference: ParkingPreference {
+        ParkingPreference(rawValue: preferenceRaw) ?? .cheapestFirst
+    }
+
     init() {
         cueStyleRaw = UserDefaults.standard.string(forKey: "cueStyle")
             ?? AudioCueService.CueStyle.spoken.rawValue
+        preferenceRaw = UserDefaults.standard.string(forKey: "parkingPreference")
+            ?? ParkingPreference.cheapestFirst.rawValue
         locationService.$location
             .compactMap { $0 }
             .receive(on: DispatchQueue.main)
@@ -55,6 +77,7 @@ final class AppModel: ObservableObject {
         segments = await repository.segments
         payStations = await repository.payStations
         overlays = await repository.overlays
+        zoneRates = await repository.zoneRates
         updateCoverageArea()
         scheduleOverlayRefresh()
     }
@@ -99,16 +122,17 @@ final class AppModel: ObservableObject {
         let segment = matcher.nearestSegment(to: location.coordinate, in: segments)
         let station = nearestPayStation(to: location, maxDistanceMeters: 120)
         var newVerdict = engine.verdict(segment: segment, overlays: overlays,
-                                        nearestPayStation: station, at: now)
+                                        nearestPayStation: station,
+                                        zoneRates: zoneRates, at: now)
 
-        // "Closest right now": when you can't park here, point at the nearest
-        // street where you likely can.
+        // "Closest right now": when you can't park here, point at the best
+        // alternative for the user's preference — free/cheapest/nearest.
         let nearby = newVerdict.level.isParkable
             ? nil
-            : nearestParkableStreet(to: location, excluding: segment?.streetName, at: now)
-        suggestion = nearby.map { "Likely parking ~\($0.meters) m away on \($0.name)" }
+            : bestSuggestion(near: location, excluding: segment?.streetName, at: now)
+        suggestion = nearby?.line
         if let nearby, newVerdict.level == .red {
-            newVerdict.spoken += " Nearest likely parking: \(nearby.name), about \(nearby.meters) meters."
+            newVerdict.spoken += " " + nearby.spoken
         }
 
         let changed = newVerdict.headline != verdict?.headline || newVerdict.level != verdict?.level
@@ -122,19 +146,86 @@ final class AppModel: ObservableObject {
         }
     }
 
-    private func nearestParkableStreet(to location: CLLocation, excluding streetName: String?,
-                                       at date: Date) -> (name: String, meters: Int)? {
-        var best: (name: String, distance: Double)?
+    private func bestSuggestion(near location: CLLocation, excluding streetName: String?,
+                                at date: Date) -> (line: String, spoken: String)? {
+        var streets: [SuggestionEngine.StreetCandidate] = []
         for segment in segments {
             guard segment.streetName != streetName else { continue }
             guard let d = matcher.distance(from: location.coordinate, toPolyline: segment.polyline),
-                  d > 25, d < 500, d < (best?.distance ?? .infinity) else { continue }
-            guard engine.verdict(segment: segment, overlays: overlays, at: date).level.isParkable else { continue }
-            best = (segment.streetName, d)
+                  d > 25, d < 500 else { continue }
+            let verdict = engine.verdict(segment: segment, overlays: overlays,
+                                         zoneRates: zoneRates, at: date)
+            if verdict.level.isParkable {
+                streets.append(.init(name: segment.streetName, meters: d,
+                                     isFree: true, hourlyRateCents: nil))
+            } else if verdict.level == .yellow,
+                      segment.rules.contains(where: { $0.kind == .paid && $0.isActive(at: date, calendar: engine.calendar) }) {
+                streets.append(.init(name: segment.streetName, meters: d,
+                                     isFree: false, hourlyRateCents: verdict.hourlyRateCents))
+            }
         }
-        guard let best else { return nil }
-        // Round to 50 m — GPS and polyline precision don't support better.
-        return (best.name, max(50, Int((best.distance / 50).rounded() * 50)))
+
+        // Garages only enter the running when the preference allows them and
+        // streets alone don't answer well nearby.
+        let streetOnly = suggestionEngine.best(streets: streets, garages: [], mode: preference)
+        if preference.allowsGarages, streetOnly.map({ $0.meters > 300 }) ?? true {
+            refreshGaragesIfNeeded(around: location)
+        }
+        let garageCandidates = garages
+            .map { garage in
+                SuggestionEngine.GarageCandidate(
+                    name: garage.name,
+                    meters: location.distance(from: CLLocation(latitude: garage.latitude,
+                                                               longitude: garage.longitude)))
+            }
+            .filter { $0.meters < 1000 }
+
+        guard let best = suggestionEngine.best(streets: streets, garages: garageCandidates,
+                                               mode: preference) else { return nil }
+        switch best {
+        case .street(let name, let meters, let isFree, let rate):
+            let m = roundedMeters(meters)
+            if isFree {
+                return ("Likely parking ~\(m) m away on \(name)",
+                        "Nearest likely parking: \(name), about \(m) meters.")
+            }
+            let rateText = rate.map { " · \(RuleEngine.dollarString($0))/hr" } ?? ""
+            return ("Paid parking ~\(m) m away on \(name)\(rateText)",
+                    "Nearest paid parking: \(name), about \(m) meters.")
+        case .garage(let name, let meters):
+            let m = roundedMeters(meters)
+            return ("Nearest lot: \(name), \(m) m",
+                    "Nearest lot: \(name), about \(m) meters.")
+        }
+    }
+
+    /// Round to 50 m — GPS and polyline precision don't support better.
+    private func roundedMeters(_ meters: Double) -> Int {
+        max(50, Int((meters / 50).rounded() * 50))
+    }
+
+    /// One MapKit .parking search per ~200 m of travel, results reused
+    /// in between — this runs during driving, so keep it quiet.
+    private func refreshGaragesIfNeeded(around location: CLLocation) {
+        if let last = lastGarageSearchLocation, location.distance(from: last) < 200 { return }
+        lastGarageSearchLocation = location
+
+        let request = MKLocalPointsOfInterestRequest(center: location.coordinate, radius: 1000)
+        request.pointOfInterestFilter = MKPointOfInterestFilter(including: [.parking])
+        Task { [weak self] in
+            guard let response = try? await MKLocalSearch(request: request).start() else { return }
+            guard let self else { return }
+            self.garages = response.mapItems.compactMap { item in
+                guard let name = item.name else { return nil }
+                let coordinate = item.placemark.coordinate
+                return Garage(name: name, latitude: coordinate.latitude,
+                              longitude: coordinate.longitude)
+            }
+            // Re-rank promptly so the suggestion line picks up the results.
+            if let current = self.locationService.location {
+                self.handle(location: current)
+            }
+        }
     }
 
     private func nearestPayStation(to location: CLLocation, maxDistanceMeters: Double) -> PayStation? {
@@ -158,6 +249,7 @@ final class AppModel: ObservableObject {
                 self.segments = await self.repository.segments
                 self.payStations = await self.repository.payStations
                 self.overlays = await self.repository.overlays
+                self.zoneRates = await self.repository.zoneRates
             }
         }
     }

@@ -14,6 +14,9 @@ actor RulesRepository {
     private(set) var segments: [StreetSegment] = []
     private(set) var payStations: [PayStation] = []
     private(set) var overlays: DynamicOverlays?
+    /// Zone code -> verified weekday rate schedule. Zones with unpublished
+    /// pricing are absent, not defaulted.
+    private(set) var zoneRates: [String: [ZoneRateWindow]] = [:]
 
     init(baseURL: URL = Config.supabaseURL, anonKey: String = Config.supabaseAnonKey, session: URLSession = .shared) {
         self.baseURL = baseURL
@@ -32,9 +35,11 @@ actor RulesRepository {
         async let fetchedSegments = fetchSegments()
         async let fetchedStations = fetchPayStations()
         async let fetchedOverlays = fetchOverlays()
+        async let fetchedRates = fetchZoneRates()
         if let s = try? await fetchedSegments { segments = s }
         if let p = try? await fetchedStations { payStations = p }
         if let o = try? await fetchedOverlays { overlays = o }
+        if let z = try? await fetchedRates { zoneRates = z }
         saveToCache()
     }
 
@@ -56,6 +61,13 @@ actor RulesRepository {
             offset += batch.count
         }
         return rows.map { $0.toModel() }
+    }
+
+    private func fetchZoneRates() async throws -> [String: [ZoneRateWindow]] {
+        let rows: [ZoneRow] = try await get("zones", query: "select=code,weekday_rate_schedule")
+        return Dictionary(rows.compactMap { row in
+            row.weekdayRateSchedule.map { (row.code, $0) }
+        }, uniquingKeysWith: { first, _ in first })
     }
 
     private func fetchPayStations() async throws -> [PayStation] {
@@ -115,6 +127,7 @@ actor RulesRepository {
         var segments: [StreetSegment]
         var payStations: [PayStation]?
         var overlays: DynamicOverlays?
+        var zoneRates: [String: [ZoneRateWindow]]?
     }
 
     private func loadFromCache() {
@@ -123,10 +136,12 @@ actor RulesRepository {
         segments = payload.segments
         payStations = payload.payStations ?? []
         overlays = payload.overlays  // fetchedAt survives, so staleness stays honest
+        zoneRates = payload.zoneRates ?? [:]
     }
 
     private func saveToCache() {
-        let payload = CachePayload(segments: segments, payStations: payStations, overlays: overlays)
+        let payload = CachePayload(segments: segments, payStations: payStations,
+                                   overlays: overlays, zoneRates: zoneRates)
         guard let data = try? JSONEncoder().encode(payload) else { return }
         try? data.write(to: cacheURL, options: .atomic)
     }
@@ -183,6 +198,13 @@ private struct SegmentRow: Decodable {
             verified: verified
         )
     }
+}
+
+private struct ZoneRow: Decodable {
+    var code: String
+    /// Decodes the jsonb schedule directly; ZoneRateWindow's snake_case keys
+    /// come through the same convertFromSnakeCase strategy as everything else.
+    var weekdayRateSchedule: [ZoneRateWindow]?
 }
 
 private struct PayStationRow: Decodable {
