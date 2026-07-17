@@ -12,6 +12,7 @@ settings:
     SWIFT_VERSION: "5.9"
     CURRENT_PROJECT_VERSION: 1
     MARKETING_VERSION: 0.1.0
+    TARGETED_DEVICE_FAMILY: "1"   # iPhone-only for Phase 1
 
 targets:
   ParkWell:
@@ -29,6 +30,7 @@ targets:
         CFBundleDisplayName: ParkWell
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIRequiresFullScreen: true
         NSSupportsLiveActivities: true
         UIBackgroundModes: [location, audio]
         NSLocationWhenInUseUsageDescription: >-
