@@ -5,6 +5,7 @@ struct ContentView: View {
     @AppStorage("hasSeenWelcome") private var hasSeenWelcome = false
     @State private var showingWelcome = false
     @State private var showingScanner = false
+    @State private var showingMap = false
     @State private var showingSettings = false
 
     var body: some View {
@@ -52,6 +53,11 @@ struct ContentView: View {
             .navigationTitle("ParkWell")
             .toolbar {
                 Button {
+                    showingMap = true
+                } label: {
+                    Image(systemName: "map")
+                }
+                Button {
                     showingSettings = true
                 } label: {
                     Image(systemName: "gearshape")
@@ -65,6 +71,10 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showingWelcome) {
                 WelcomeView()
+            }
+            .sheet(isPresented: $showingMap) {
+                CoverageMapView()
+                    .environmentObject(model)
             }
             .sheet(isPresented: $showingScanner) {
                 SignScannerView()

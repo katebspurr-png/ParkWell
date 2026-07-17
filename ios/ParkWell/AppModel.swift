@@ -25,9 +25,9 @@ final class AppModel: ObservableObject {
     private let liveActivity = LiveActivityController()
 
     private var cancellables: Set<AnyCancellable> = []
-    private var segments: [StreetSegment] = []
-    private var payStations: [PayStation] = []
-    private var overlays: DynamicOverlays?
+    @Published private(set) var segments: [StreetSegment] = []
+    @Published private(set) var payStations: [PayStation] = []
+    @Published private(set) var overlays: DynamicOverlays?
     private var overlayRefreshTask: Task<Void, Never>?
 
     var cueStyle: AudioCueService.CueStyle {
