@@ -33,6 +33,7 @@ final class AppModel: ObservableObject {
     private let liveActivity = LiveActivityController()
 
     private var cancellables: Set<AnyCancellable> = []
+    private var segmentIndex = SegmentIndex()
     @Published private(set) var segments: [StreetSegment] = []
     @Published private(set) var payStations: [PayStation] = []
     @Published private(set) var overlays: DynamicOverlays?
@@ -78,6 +79,7 @@ final class AppModel: ObservableObject {
         payStations = await repository.payStations
         overlays = await repository.overlays
         zoneRates = await repository.zoneRates
+        segmentIndex = SegmentIndex(segments: segments)
         updateCoverageArea()
         scheduleOverlayRefresh()
     }
@@ -119,7 +121,10 @@ final class AppModel: ObservableObject {
 
     private func handle(location: CLLocation) {
         let now = Date()
-        let segment = matcher.nearestSegment(to: location.coordinate, in: segments)
+        let segment = matcher.nearestSegment(
+            to: location.coordinate,
+            in: segmentIndex.candidates(near: location.coordinate)
+        )
         let station = nearestPayStation(to: location, maxDistanceMeters: 120)
         var newVerdict = engine.verdict(segment: segment, overlays: overlays,
                                         nearestPayStation: station,
@@ -149,7 +154,8 @@ final class AppModel: ObservableObject {
     private func bestSuggestion(near location: CLLocation, excluding streetName: String?,
                                 at date: Date) -> (line: String, spoken: String)? {
         var streets: [SuggestionEngine.StreetCandidate] = []
-        for segment in segments {
+        // cellRadius 2 ≈ ≥790 m guaranteed — superset of the 500 m cutoff.
+        for segment in segmentIndex.candidates(near: location.coordinate, cellRadius: 2) {
             guard segment.streetName != streetName else { continue }
             guard let d = matcher.distance(from: location.coordinate, toPolyline: segment.polyline),
                   d > 25, d < 500 else { continue }
@@ -250,6 +256,7 @@ final class AppModel: ObservableObject {
                 self.payStations = await self.repository.payStations
                 self.overlays = await self.repository.overlays
                 self.zoneRates = await self.repository.zoneRates
+                self.segmentIndex = SegmentIndex(segments: self.segments)
             }
         }
     }
