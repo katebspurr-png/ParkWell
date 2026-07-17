@@ -1,0 +1,5813 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 1,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5854313621034,
+     44.6395172919485
+    ]
+   },
+   "properties": {
+    "GLOBALID": "446e8f7d-3d5b-4a37-ab40-15d03966a2ac",
+    "OBJECTID": 1,
+    "PRKPAYID": "PYP100",
+    "ASSETID": "PYP100",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "College",
+    "MAINTBY": "HRM",
+    "TID": "PS125",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 2,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5834512596215,
+     44.6400297553839
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e5a6fd12-8b9c-472b-b250-32b6145edb56",
+    "OBJECTID": 2,
+    "PRKPAYID": "PYP101",
+    "ASSETID": "PYP101",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "College",
+    "MAINTBY": "HRM",
+    "TID": "PS128",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435007000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 3,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5810203861234,
+     44.6406605955794
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e0a43ea8-a819-4ba0-ad7b-b0b35e9b0081",
+    "OBJECTID": 3,
+    "PRKPAYID": "PYP102",
+    "ASSETID": "PYP102",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "College",
+    "MAINTBY": "HRM",
+    "TID": "PS145",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435015000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 4,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5806241293701,
+     44.6421290623452
+    ]
+   },
+   "properties": {
+    "GLOBALID": "5f0e9fc3-a82f-4b16-94ba-440a26726d22",
+    "OBJECTID": 4,
+    "PRKPAYID": "PYP103",
+    "ASSETID": "PYP103",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Spring Garden",
+    "MAINTBY": "HRM",
+    "TID": "PS147",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435004000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 5,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5822186821185,
+     44.6415102640398
+    ]
+   },
+   "properties": {
+    "GLOBALID": "3b64f880-9f2b-4faf-b307-f6c20c96216f",
+    "OBJECTID": 5,
+    "PRKPAYID": "PYP104",
+    "ASSETID": "PYP104",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Spring Garden",
+    "MAINTBY": "HRM",
+    "TID": "PS146",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435015000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 6,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5835904571681,
+     44.6411738779207
+    ]
+   },
+   "properties": {
+    "GLOBALID": "5efc4a05-c256-460a-bb4e-8794ef3e69ea",
+    "OBJECTID": 6,
+    "PRKPAYID": "PYP105",
+    "ASSETID": "PYP105",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Spring Garden",
+    "MAINTBY": "HRM",
+    "TID": "PS132",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435018000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 8,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5862033877333,
+     44.640425256216
+    ]
+   },
+   "properties": {
+    "GLOBALID": "384bb743-ece6-4126-b2d4-556a05f3aa0d",
+    "OBJECTID": 8,
+    "PRKPAYID": "PYP107",
+    "ASSETID": "PYP107",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Spring Garden",
+    "MAINTBY": "HRM",
+    "TID": "PS124",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 9,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5846489510505,
+     44.6404546852737
+    ]
+   },
+   "properties": {
+    "GLOBALID": "c924145d-3fa0-41b7-9171-20dfe1ffc587",
+    "OBJECTID": 9,
+    "PRKPAYID": "PYP108",
+    "ASSETID": "PYP108",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Carlton",
+    "MAINTBY": "HRM",
+    "TID": "PS129",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 10,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.585238508185,
+     44.6410120486875
+    ]
+   },
+   "properties": {
+    "GLOBALID": "db194cf9-1cac-4e61-b367-1d6d4fcd74e2",
+    "OBJECTID": 10,
+    "PRKPAYID": "PYP109",
+    "ASSETID": "PYP109",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Carlton",
+    "MAINTBY": "HRM",
+    "TID": "PS130",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435008000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 11,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5777485323141,
+     44.6503169015407
+    ]
+   },
+   "properties": {
+    "GLOBALID": "3973c737-93d5-4fc3-a950-36af56a344fe",
+    "OBJECTID": 11,
+    "PRKPAYID": "PYP11",
+    "ASSETID": "PYP11",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Albemarle",
+    "MAINTBY": "HRM",
+    "TID": "PS041",
+    "PKNGZONE": "B",
+    "INSTDATE": 1602598187000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1687196053000,
+    "SDATE": 1600052400000,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 12,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5830733473647,
+     44.643863271589
+    ]
+   },
+   "properties": {
+    "GLOBALID": "55d9cd7d-9fdb-4fda-ba65-d15bb401eb06",
+    "OBJECTID": 12,
+    "PRKPAYID": "PYP110",
+    "ASSETID": "PYP110",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Sackville",
+    "MAINTBY": "HRM",
+    "TID": "PS151",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435018000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 13,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5823487842228,
+     44.6440153351327
+    ]
+   },
+   "properties": {
+    "GLOBALID": "8d9eedcf-a2a7-4402-aca4-f907206aa2d2",
+    "OBJECTID": 13,
+    "PRKPAYID": "PYP111",
+    "ASSETID": "PYP111",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Sackville",
+    "MAINTBY": "HRM",
+    "TID": "PS150",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 14,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5813695100703,
+     44.6442217102365
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a13b9d8c-5873-4469-9e62-958cf9535eea",
+    "OBJECTID": 14,
+    "PRKPAYID": "PYP112",
+    "ASSETID": "PYP112",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Sackville",
+    "MAINTBY": "HRM",
+    "TID": "PS149",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435008000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 15,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5786825574274,
+     44.6450597040088
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e5a02bfe-7dff-4960-b069-a75b5afc96b4",
+    "OBJECTID": 15,
+    "PRKPAYID": "PYP113",
+    "ASSETID": "PYP113",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Sackville",
+    "MAINTBY": "HRM",
+    "TID": "PS076",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 16,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5753104309711,
+     44.6452997988369
+    ]
+   },
+   "properties": {
+    "GLOBALID": "f4d3381a-2b3f-43a9-a91b-3b92b61ac070",
+    "OBJECTID": 16,
+    "PRKPAYID": "PYP114",
+    "ASSETID": "PYP114",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Market",
+    "MAINTBY": "HRM",
+    "TID": "PS066",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600264465000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435018000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 17,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5750409552505,
+     44.6450514599009
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e1f31bd6-9f08-483d-b0c5-2c2353b2ad9c",
+    "OBJECTID": 17,
+    "PRKPAYID": "PYP115",
+    "ASSETID": "PYP115",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Market",
+    "MAINTBY": "HRM",
+    "TID": "PS067",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1712579209000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 18,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5741976635742,
+     44.6447433157948
+    ]
+   },
+   "properties": {
+    "GLOBALID": "494665e1-1863-453c-8ea5-eb7f463d9c48",
+    "OBJECTID": 18,
+    "PRKPAYID": "PYP116",
+    "ASSETID": "PYP116",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Grafton",
+    "MAINTBY": "HRM",
+    "TID": "PS069",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435020000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 19,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5739254632633,
+     44.6441503512009
+    ]
+   },
+   "properties": {
+    "GLOBALID": "959dc596-0b45-47b5-a2d7-f54ad8d63ac1",
+    "OBJECTID": 19,
+    "PRKPAYID": "PYP117",
+    "ASSETID": "PYP117",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Grafton",
+    "MAINTBY": "HRM",
+    "TID": "PS070",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435013000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 20,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5747490234444,
+     44.6455087737963
+    ]
+   },
+   "properties": {
+    "GLOBALID": "2be5371f-09bc-4a56-b28f-fa32530940ea",
+    "OBJECTID": 20,
+    "PRKPAYID": "PYP118",
+    "ASSETID": "PYP118",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Grafton",
+    "MAINTBY": "HRM",
+    "TID": "PS068",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435005000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 21,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5743594923777,
+     44.6460153236063
+    ]
+   },
+   "properties": {
+    "GLOBALID": "25995eb0-a675-44ab-b13c-6b6ebde24bbd",
+    "OBJECTID": 21,
+    "PRKPAYID": "PYP119",
+    "ASSETID": "PYP119",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Sackville",
+    "MAINTBY": "HRM",
+    "TID": "PS062",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 22,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.57390049459,
+     44.6461924456932
+    ]
+   },
+   "properties": {
+    "GLOBALID": "65e20776-6321-434f-99ca-60fdfa3f4012",
+    "OBJECTID": 22,
+    "PRKPAYID": "PYP120",
+    "ASSETID": "PYP120",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Sackville",
+    "MAINTBY": "HRM",
+    "TID": "PS061",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435008000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 23,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5721351819875,
+     44.6465994315154
+    ]
+   },
+   "properties": {
+    "GLOBALID": "0c4eadf4-1f5d-4e4c-9340-6ca152224921",
+    "OBJECTID": 23,
+    "PRKPAYID": "PYP121",
+    "ASSETID": "PYP121",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Sackville",
+    "MAINTBY": "HRM",
+    "TID": "PS059",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1663173242000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 24,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5725532803786,
+     44.6476321094817
+    ]
+   },
+   "properties": {
+    "GLOBALID": "70cbc92e-46f7-4ca4-9315-4e9f26e2bb5f",
+    "OBJECTID": 24,
+    "PRKPAYID": "PYP122",
+    "ASSETID": "PYP122",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Prince",
+    "MAINTBY": "HRM",
+    "TID": "PS057",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435018000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 25,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5728438072196,
+     44.6474810217393
+    ]
+   },
+   "properties": {
+    "GLOBALID": "81459d6a-5a99-49cc-9c24-afc5729ec012",
+    "OBJECTID": 25,
+    "PRKPAYID": "PYP123",
+    "ASSETID": "PYP123",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Prince",
+    "MAINTBY": "HRM",
+    "TID": "PS056",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435002000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 26,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5756380384704,
+     44.6458617595413
+    ]
+   },
+   "properties": {
+    "GLOBALID": "d40ffbaf-4341-46d7-ab59-bf2d3b99bcb5",
+    "OBJECTID": 26,
+    "PRKPAYID": "PYP124",
+    "ASSETID": "PYP124",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Market",
+    "MAINTBY": "HRM",
+    "TID": "PS063",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435013000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 27,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5759944585341,
+     44.6468684875346
+    ]
+   },
+   "properties": {
+    "GLOBALID": "3fa34373-aa41-41a2-9dcb-4580a1a99ef2",
+    "OBJECTID": 27,
+    "PRKPAYID": "PYP125",
+    "ASSETID": "PYP125",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Market",
+    "MAINTBY": "HRM",
+    "TID": "PS046",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435005000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 28,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5763512478054,
+     44.6475625370914
+    ]
+   },
+   "properties": {
+    "GLOBALID": "637c9c6a-82fc-4f6b-87e5-c9362a561f05",
+    "OBJECTID": 28,
+    "PRKPAYID": "PYP126",
+    "ASSETID": "PYP126",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Market",
+    "MAINTBY": "HRM",
+    "TID": "PS045",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435018000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 29,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5751482365533,
+     44.647983702499
+    ]
+   },
+   "properties": {
+    "GLOBALID": "9c5b4c70-b5d7-4194-9bfc-ba0d1f2935f1",
+    "OBJECTID": 29,
+    "PRKPAYID": "PYP127",
+    "ASSETID": "PYP127",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Argyle",
+    "MAINTBY": "HRM",
+    "TID": "PS047",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435005000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 30,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.574721225078,
+     44.6471385929941
+    ]
+   },
+   "properties": {
+    "GLOBALID": "7a520824-8936-4f19-8f5f-dee6d608b314",
+    "OBJECTID": 30,
+    "PRKPAYID": "PYP128",
+    "ASSETID": "PYP128",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Argyle",
+    "MAINTBY": "HRM",
+    "TID": "PS048",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435018000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 31,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5781430876582,
+     44.6507516079078
+    ]
+   },
+   "properties": {
+    "GLOBALID": "d753f8be-bb4b-40ea-b1bf-17674c99f15d",
+    "OBJECTID": 31,
+    "PRKPAYID": "PYP13",
+    "ASSETID": "PYP13",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Albemarle",
+    "MAINTBY": "HRM",
+    "TID": "PS038",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435019000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 32,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5721063784062,
+     44.6450162024094
+    ]
+   },
+   "properties": {
+    "GLOBALID": "b8c65cc8-4649-463a-8f3d-0a080deb205b",
+    "OBJECTID": 32,
+    "PRKPAYID": "PYP130",
+    "ASSETID": "PYP130",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Granville",
+    "MAINTBY": "HRM",
+    "TID": "PS073",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435005000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 33,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5725468322715,
+     44.6455695326015
+    ]
+   },
+   "properties": {
+    "GLOBALID": "4ff898d3-8f2e-460b-9735-cee68d262d84",
+    "OBJECTID": 33,
+    "PRKPAYID": "PYP131",
+    "ASSETID": "PYP131",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Granville",
+    "MAINTBY": "HRM",
+    "TID": "PS074",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435008000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 34,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5729862908034,
+     44.6464780093091
+    ]
+   },
+   "properties": {
+    "GLOBALID": "b895956c-58aa-4cd0-9529-29184ff6623e",
+    "OBJECTID": 34,
+    "PRKPAYID": "PYP132",
+    "ASSETID": "PYP132",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Granville",
+    "MAINTBY": "HRM",
+    "TID": "PS060",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 35,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5735271466731,
+     44.6474810779802
+    ]
+   },
+   "properties": {
+    "GLOBALID": "7f0bc0d6-c46a-4ea4-8ced-539961161c44",
+    "OBJECTID": 35,
+    "PRKPAYID": "PYP133",
+    "ASSETID": "PYP133",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Granville",
+    "MAINTBY": "HRM",
+    "TID": "PS050",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435002000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 36,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5737111270331,
+     44.6481476449404
+    ]
+   },
+   "properties": {
+    "GLOBALID": "cb04fb6d-2c3a-48df-b249-3a884f4d5847",
+    "OBJECTID": 36,
+    "PRKPAYID": "PYP134",
+    "ASSETID": "PYP134",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Granville",
+    "MAINTBY": "HRM",
+    "TID": "PS051",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435008000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 37,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.573031321552,
+     44.6486490155441
+    ]
+   },
+   "properties": {
+    "GLOBALID": "677b682e-6588-4ffe-af33-ac34422c6eab",
+    "OBJECTID": 37,
+    "PRKPAYID": "PYP136",
+    "ASSETID": "PYP136",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "George",
+    "MAINTBY": "HRM",
+    "TID": "PS054",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435002000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 38,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5772230565004,
+     44.6438542360546
+    ]
+   },
+   "properties": {
+    "GLOBALID": "08ff02fb-762a-4b94-846c-69707e684d7a",
+    "OBJECTID": 38,
+    "PRKPAYID": "PYP137",
+    "ASSETID": "PYP137",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Birmingham",
+    "MAINTBY": "HRM",
+    "TID": "PS079",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435005000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 39,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5786669429111,
+     44.6445802035522
+    ]
+   },
+   "properties": {
+    "GLOBALID": "04bf0521-9da6-4d0f-b9bc-08f530661fec",
+    "OBJECTID": 39,
+    "PRKPAYID": "PYP138",
+    "ASSETID": "PYP138",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Dresden",
+    "MAINTBY": "HRM",
+    "TID": "PS077",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435005000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 40,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5779174515201,
+     44.6431244041258
+    ]
+   },
+   "properties": {
+    "GLOBALID": "c9bacc65-16dd-4433-a3f3-d48c144fe3ee",
+    "OBJECTID": 40,
+    "PRKPAYID": "PYP139",
+    "ASSETID": "PYP139",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Dresden",
+    "MAINTBY": "HRM",
+    "TID": "PS080",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 41,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5761659262606,
+     44.6436153381117
+    ]
+   },
+   "properties": {
+    "GLOBALID": "c65c023f-3177-4714-ae5c-4a7081e91e56",
+    "OBJECTID": 41,
+    "PRKPAYID": "PYP141",
+    "ASSETID": "PYP141",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Queen",
+    "MAINTBY": "HRM",
+    "TID": "PS084",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 42,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5753433299718,
+     44.6424150358495
+    ]
+   },
+   "properties": {
+    "GLOBALID": "c2740504-353c-4d71-b598-dd4bad95db9b",
+    "OBJECTID": 42,
+    "PRKPAYID": "PYP142",
+    "ASSETID": "PYP142",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Queen",
+    "MAINTBY": "HRM",
+    "TID": "PS085",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435002000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 43,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5778703977655,
+     44.6415056582041
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e52ba817-5846-4aa1-9de4-b7d323510415",
+    "OBJECTID": 43,
+    "PRKPAYID": "PYP143",
+    "ASSETID": "PYP143",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Clyde",
+    "MAINTBY": "HRM",
+    "TID": "PS086",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435005000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 44,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5712064919687,
+     44.640664075254
+    ]
+   },
+   "properties": {
+    "GLOBALID": "6b678038-5896-42ae-95f8-f2b65afcccf5",
+    "OBJECTID": 44,
+    "PRKPAYID": "PYP145",
+    "ASSETID": "PYP145",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Harvey",
+    "MAINTBY": "HRM",
+    "TID": "PS091",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 45,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5637122356255,
+     44.6638430907811
+    ]
+   },
+   "properties": {
+    "GLOBALID": "2e9d0adc-50b6-4278-b27c-3e3de46ea80c",
+    "OBJECTID": 45,
+    "PRKPAYID": "PYP148",
+    "ASSETID": "PYP148",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Kingswharf",
+    "MAINTBY": "HRM",
+    "TID": "PS001",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435021000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 46,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5660425481175,
+     44.6651144848479
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e6c83e58-74dc-4423-871b-112719d45546",
+    "OBJECTID": 46,
+    "PRKPAYID": "PYP149",
+    "ASSETID": "PYP149",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "King",
+    "MAINTBY": "HRM",
+    "TID": "PS002",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435008000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 47,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.594866659485,
+     44.6461558461135
+    ]
+   },
+   "properties": {
+    "GLOBALID": "7d0b369e-0ae2-4a23-8103-0038b50da863",
+    "OBJECTID": 47,
+    "PRKPAYID": "PYP15",
+    "ASSETID": "PYP15",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Quinpool",
+    "MAINTBY": "HRM",
+    "TID": "PS165",
+    "PKNGZONE": "E",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435009000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 48,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5664301648744,
+     44.6655040913621
+    ]
+   },
+   "properties": {
+    "GLOBALID": "beccd3af-1d95-4227-94d4-e7fa49374bfa",
+    "OBJECTID": 48,
+    "PRKPAYID": "PYP150",
+    "ASSETID": "PYP150",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "King",
+    "MAINTBY": "HRM",
+    "TID": "PS004",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435014000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 49,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5671800461342,
+     44.6658070414504
+    ]
+   },
+   "properties": {
+    "GLOBALID": "b95a5d41-fd90-40b8-bc44-6a082d32e118",
+    "OBJECTID": 49,
+    "PRKPAYID": "PYP151",
+    "ASSETID": "PYP151",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "King",
+    "MAINTBY": "HRM",
+    "TID": "PS007",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435014000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 50,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5676114854056,
+     44.6662305564702
+    ]
+   },
+   "properties": {
+    "GLOBALID": "b11ff2f3-11bd-48b0-b520-e46eb01996f2",
+    "OBJECTID": 50,
+    "PRKPAYID": "PYP152",
+    "ASSETID": "PYP152",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "King",
+    "MAINTBY": "HRM",
+    "TID": "PS012",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 51,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5682837342586,
+     44.6664697407664
+    ]
+   },
+   "properties": {
+    "GLOBALID": "6867297d-1ea6-43ae-93b0-8b868500e123",
+    "OBJECTID": 51,
+    "PRKPAYID": "PYP153",
+    "ASSETID": "PYP153",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "King",
+    "MAINTBY": "HRM",
+    "TID": "PS015",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 52,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5679107528543,
+     44.6669187361426
+    ]
+   },
+   "properties": {
+    "GLOBALID": "ebc3a029-1fe9-4fbd-9a65-484a3c5ed222",
+    "OBJECTID": 52,
+    "PRKPAYID": "PYP154",
+    "ASSETID": "PYP154",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Ochterloney",
+    "MAINTBY": "HRM",
+    "TID": "PS014",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435014000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 53,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.567386206797,
+     44.6673929894219
+    ]
+   },
+   "properties": {
+    "GLOBALID": "9d9c232a-153c-40bb-aa42-3945863a6399",
+    "OBJECTID": 53,
+    "PRKPAYID": "PYP155",
+    "ASSETID": "PYP155",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Ochterloney",
+    "MAINTBY": "HRM",
+    "TID": "PS019",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435021000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 54,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5667637578484,
+     44.6679255004769
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e170aa8f-83d5-4088-9b52-f1da705a4c7f",
+    "OBJECTID": 54,
+    "PRKPAYID": "PYP156",
+    "ASSETID": "PYP156",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Ochterloney",
+    "MAINTBY": "HRM",
+    "TID": "PS025",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435021000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 55,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.562668608861,
+     44.6628797284429
+    ]
+   },
+   "properties": {
+    "GLOBALID": "7f7c7213-4a95-45ff-afe7-965d01204aa2",
+    "OBJECTID": 55,
+    "PRKPAYID": "PYP157",
+    "ASSETID": "PYP157",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Kings Wharf",
+    "MAINTBY": "HRM",
+    "TID": "PS024",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1635509547000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 56,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5662940602274,
+     44.6673894353239
+    ]
+   },
+   "properties": {
+    "GLOBALID": "6340dfe4-39ce-49f9-a6fb-f416e09c9560",
+    "OBJECTID": 56,
+    "PRKPAYID": "PYP158",
+    "ASSETID": "PYP158",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Dundas",
+    "MAINTBY": "HRM",
+    "TID": "PS020",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435018000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 57,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5658584312135,
+     44.6671291876123
+    ]
+   },
+   "properties": {
+    "GLOBALID": "792c8a03-bf30-4572-ae83-90b76f121018",
+    "OBJECTID": 57,
+    "PRKPAYID": "PYP159",
+    "ASSETID": "PYP159",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Dundas",
+    "MAINTBY": "HRM",
+    "TID": "PS021",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435009000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 58,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5962340795021,
+     44.6457810624288
+    ]
+   },
+   "properties": {
+    "GLOBALID": "48eb3e0e-c7ec-4678-8a4d-9d9d4883b93e",
+    "OBJECTID": 58,
+    "PRKPAYID": "PYP16",
+    "ASSETID": "PYP16",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Quinpool",
+    "MAINTBY": "HRM",
+    "TID": "PS166",
+    "PKNGZONE": "E",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435019000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 59,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5651285248923,
+     44.6678694684993
+    ]
+   },
+   "properties": {
+    "GLOBALID": "3c63d489-a1a6-4069-92e8-90da31f0ce55",
+    "OBJECTID": 59,
+    "PRKPAYID": "PYP160",
+    "ASSETID": "PYP160",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Victoria",
+    "MAINTBY": "HRM",
+    "TID": "PS023",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435009000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 60,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5652757551741,
+     44.666714311188
+    ]
+   },
+   "properties": {
+    "GLOBALID": "7b504923-2479-4c11-bbd6-20dee5b2e437",
+    "OBJECTID": 60,
+    "PRKPAYID": "PYP161",
+    "ASSETID": "PYP161",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Portland",
+    "MAINTBY": "HRM",
+    "TID": "PS022",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435021000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 61,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5669703802452,
+     44.6668528937143
+    ]
+   },
+   "properties": {
+    "GLOBALID": "28a136d1-a3e5-4ae8-96ce-7ecd6a6923a1",
+    "OBJECTID": 61,
+    "PRKPAYID": "PYP162",
+    "ASSETID": "PYP162",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Queen",
+    "MAINTBY": "HRM",
+    "TID": "PS013",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1776787349000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 62,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5694377478018,
+     44.6662176009694
+    ]
+   },
+   "properties": {
+    "GLOBALID": "547eb34f-d4be-401f-b567-9248fd6f0c53",
+    "OBJECTID": 62,
+    "PRKPAYID": "PYP163",
+    "ASSETID": "PYP163",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Edward",
+    "MAINTBY": "HRM",
+    "TID": "PS017",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435011000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 63,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5702110643108,
+     44.6663557764305
+    ]
+   },
+   "properties": {
+    "GLOBALID": "53d9653b-6f13-4dca-8030-1c63821e823b",
+    "OBJECTID": 63,
+    "PRKPAYID": "PYP165",
+    "ASSETID": "PYP165",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "North",
+    "MAINTBY": "HRM",
+    "TID": "PS018",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435009000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 64,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5684818253551,
+     44.665177944215
+    ]
+   },
+   "properties": {
+    "GLOBALID": "193145fb-0fb1-4e34-8705-b9109cf4eb3d",
+    "OBJECTID": 64,
+    "PRKPAYID": "PYP166",
+    "ASSETID": "PYP166",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Queen",
+    "MAINTBY": "HRM",
+    "TID": "PS010",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 65,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5687796537027,
+     44.6648383551304
+    ]
+   },
+   "properties": {
+    "GLOBALID": "d8647657-4f20-463a-a9b9-96c8ec4a71da",
+    "OBJECTID": 65,
+    "PRKPAYID": "PYP167",
+    "ASSETID": "PYP167",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Alderney",
+    "MAINTBY": "HRM",
+    "TID": "PS170",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435011000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 66,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5678215672146,
+     44.6657599737417
+    ]
+   },
+   "properties": {
+    "GLOBALID": "497e49cf-b1bc-4c21-a4ec-dd8796ac3a8d",
+    "OBJECTID": 66,
+    "PRKPAYID": "PYP168",
+    "ASSETID": "PYP168",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Queen",
+    "MAINTBY": "HRM",
+    "TID": "PS011",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435009000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 67,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5662599862303,
+     44.6663165113339
+    ]
+   },
+   "properties": {
+    "GLOBALID": "9c264994-60c4-4f3d-9076-f6759bd8fe04",
+    "OBJECTID": 67,
+    "PRKPAYID": "PYP169",
+    "ASSETID": "PYP169",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Wentworth",
+    "MAINTBY": "HRM",
+    "TID": "PS008",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435021000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 68,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5969380263081,
+     44.646057912437
+    ]
+   },
+   "properties": {
+    "GLOBALID": "d4c32a69-344d-4f1f-b1ea-4da36e4222ac",
+    "OBJECTID": 68,
+    "PRKPAYID": "PYP17",
+    "ASSETID": "PYP17",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Monastery",
+    "MAINTBY": "HRM",
+    "TID": "PS167",
+    "PKNGZONE": "E",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435009000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 69,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5664214161818,
+     44.6658540426756
+    ]
+   },
+   "properties": {
+    "GLOBALID": "8145e0d1-7584-41c7-9aa1-32ab5a90caa4",
+    "OBJECTID": 69,
+    "PRKPAYID": "PYP170",
+    "ASSETID": "PYP170",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Portland",
+    "MAINTBY": "HRM",
+    "TID": "PS005",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435009000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 70,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5669940032422,
+     44.6653488212731
+    ]
+   },
+   "properties": {
+    "GLOBALID": "f3906ea7-2fd2-42f6-abd7-27bcdffa3647",
+    "OBJECTID": 70,
+    "PRKPAYID": "PYP171",
+    "ASSETID": "PYP171",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Portland",
+    "MAINTBY": "HRM",
+    "TID": "PS006",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435019000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 71,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5681091377,
+     44.6644249068954
+    ]
+   },
+   "properties": {
+    "GLOBALID": "dc332b9f-5b83-48bb-a16b-95efec3561f0",
+    "OBJECTID": 71,
+    "PRKPAYID": "PYP172",
+    "ASSETID": "PYP172",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Portland",
+    "MAINTBY": "HRM",
+    "TID": "PS009",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 72,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5666153417904,
+     44.6644974006152
+    ]
+   },
+   "properties": {
+    "GLOBALID": "68717aa8-e5b3-46cb-b3f0-830cbc479f95",
+    "OBJECTID": 72,
+    "PRKPAYID": "PYP173",
+    "ASSETID": "PYP173",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 2,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Prince",
+    "MAINTBY": "HRM",
+    "TID": "PS003",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435011000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 73,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5704348624958,
+     44.6658431373163
+    ]
+   },
+   "properties": {
+    "GLOBALID": "5399616c-a754-4729-b812-c98073244bc5",
+    "OBJECTID": 73,
+    "PRKPAYID": "PYP174",
+    "ASSETID": "PYP174",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Alderney",
+    "MAINTBY": "HRM",
+    "TID": "PS171",
+    "PKNGZONE": "H",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 74,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5831461737848,
+     44.649312801224
+    ]
+   },
+   "properties": {
+    "GLOBALID": "dde8a146-d424-4676-9ae2-73c4f32306dc",
+    "OBJECTID": 74,
+    "PRKPAYID": "PYP175",
+    "ASSETID": "PYP175",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Rainnie",
+    "MAINTBY": "HRM",
+    "TID": "PS036",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 75,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5817167807929,
+     44.6492332982434
+    ]
+   },
+   "properties": {
+    "GLOBALID": "ba8ece50-111f-4da7-aaed-904670c4d425",
+    "OBJECTID": 75,
+    "PRKPAYID": "PYP176",
+    "ASSETID": "PYP176",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Rainnie",
+    "MAINTBY": "HRM",
+    "TID": "PS035",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435016000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 76,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.570335843897,
+     44.6429159235892
+    ]
+   },
+   "properties": {
+    "GLOBALID": "eece8a81-abbf-4dda-9864-7e8b704b4022",
+    "OBJECTID": 76,
+    "PRKPAYID": "PYP177",
+    "ASSETID": "PYP177",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Hollis",
+    "MAINTBY": "HRM",
+    "TID": "PS105",
+    "PKNGZONE": "B",
+    "INSTDATE": 1610732084000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435011000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 77,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5703124149361,
+     44.6453655078786
+    ]
+   },
+   "properties": {
+    "GLOBALID": "ddb11cd1-534b-4efa-9ae8-59a4c0588d86",
+    "OBJECTID": 77,
+    "PRKPAYID": "PYP178",
+    "ASSETID": "PYP178",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2021,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Salter",
+    "MAINTBY": "HRM",
+    "TID": "PS058",
+    "PKNGZONE": "B",
+    "INSTDATE": 1611337187000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435011000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 78,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.580330772836,
+     44.6431996140127
+    ]
+   },
+   "properties": {
+    "GLOBALID": "1761a40e-5fd9-48dd-9c49-d9c5af90f301",
+    "OBJECTID": 78,
+    "PRKPAYID": "PYP179",
+    "ASSETID": "PYP179",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2021,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "South Park",
+    "MAINTBY": "HRM",
+    "TID": "PS148",
+    "PKNGZONE": "D",
+    "INSTDATE": 1610991715000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435019000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 79,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5995520402416,
+     44.6449055468584
+    ]
+   },
+   "properties": {
+    "GLOBALID": "2319fca6-5f39-4d67-95c6-297b99b03506",
+    "OBJECTID": 79,
+    "PRKPAYID": "PYP18",
+    "ASSETID": "PYP18",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Harvard",
+    "MAINTBY": "HRM",
+    "TID": "PS168",
+    "PKNGZONE": "E",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435012000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 80,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5720234800752,
+     44.6488139447716
+    ]
+   },
+   "properties": {
+    "GLOBALID": "979fa434-9e92-416d-81bb-7ab6444941ec",
+    "OBJECTID": 80,
+    "PRKPAYID": "PYP180",
+    "ASSETID": "PYP180",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2021,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Lower Water",
+    "MAINTBY": "HRM",
+    "TID": "PS173",
+    "PKNGZONE": "B",
+    "INSTDATE": 1611337484000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435017000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 81,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5704382967551,
+     44.6653296209252
+    ]
+   },
+   "properties": {
+    "GLOBALID": "225a0cea-d6f0-476d-a415-634812f2d37a",
+    "OBJECTID": 81,
+    "PRKPAYID": "PYP181",
+    "ASSETID": "PYP181",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2021,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Alderney Landing",
+    "MAINTBY": "HRM",
+    "TID": "PS169",
+    "PKNGZONE": "I",
+    "INSTDATE": 1610042078000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1663681598000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 82,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5801304000186,
+     44.6449536509075
+    ]
+   },
+   "properties": {
+    "GLOBALID": "8beb3d6a-f932-44fa-8a93-4751cd943d78",
+    "OBJECTID": 82,
+    "PRKPAYID": "PYP194",
+    "ASSETID": "PYP194",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2021,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": null,
+    "MAINTBY": "HRM",
+    "TID": "PS174",
+    "PKNGZONE": "J",
+    "INSTDATE": 1622415600000,
+    "ADDDATE": 1635509993000,
+    "MODDATE": 1663681570000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 83,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5724249066329,
+     44.6469244905983
+    ]
+   },
+   "properties": {
+    "GLOBALID": "205311bd-75fa-43a8-bf20-da03ba21a5b3",
+    "OBJECTID": 83,
+    "PRKPAYID": "PYP195",
+    "ASSETID": "PYP195",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2022,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Hollis St",
+    "MAINTBY": "HRM",
+    "TID": "PS175",
+    "PKNGZONE": "B",
+    "INSTDATE": null,
+    "ADDDATE": 1663173252000,
+    "MODDATE": 1713287975000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 84,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5766332936518,
+     44.6418273045754
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a4ba821c-cea0-4182-af8c-184b2154dbb4",
+    "OBJECTID": 84,
+    "PRKPAYID": "PYP196",
+    "ASSETID": "PYP196",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2022,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Clyde St",
+    "MAINTBY": "HRM",
+    "TID": "PS081",
+    "PKNGZONE": "C",
+    "INSTDATE": null,
+    "ADDDATE": 1663173421000,
+    "MODDATE": 1663173489000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 85,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5783016277295,
+     44.6418158546039
+    ]
+   },
+   "properties": {
+    "GLOBALID": "053d988b-1dd4-4b9e-93e9-fef505dedba6",
+    "OBJECTID": 85,
+    "PRKPAYID": "PYP197",
+    "ASSETID": "PYP197",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2022,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brenton St",
+    "MAINTBY": "HRM",
+    "TID": "PS082",
+    "PKNGZONE": "C",
+    "INSTDATE": null,
+    "ADDDATE": 1663173505000,
+    "MODDATE": 1681399586000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 86,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5753941126331,
+     44.6439494372937
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e0143b42-dfab-43cd-bc59-e99b356ad52e",
+    "OBJECTID": 86,
+    "PRKPAYID": "PYP198",
+    "ASSETID": "PYP198",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2022,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Doyle St",
+    "MAINTBY": "HRM",
+    "TID": "PS176",
+    "PKNGZONE": "C",
+    "INSTDATE": null,
+    "ADDDATE": 1663173572000,
+    "MODDATE": 1663682102000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 87,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5880974621537,
+     44.648380615183
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a8c73990-3e38-4695-972a-3de8ec5d6459",
+    "OBJECTID": 87,
+    "PRKPAYID": "PYP20",
+    "ASSETID": "PYP20",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Cogswell",
+    "MAINTBY": "HRM",
+    "TID": "PS162",
+    "PKNGZONE": "E",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435012000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 88,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5872860696531,
+     44.6402736453895
+    ]
+   },
+   "properties": {
+    "GLOBALID": "bf60a270-a662-49d5-93bd-789102878f41",
+    "OBJECTID": 88,
+    "PRKPAYID": "PYP207",
+    "ASSETID": "PYP207",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2023,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Coburg Rd",
+    "MAINTBY": "HRM",
+    "TID": "PS177",
+    "PKNGZONE": "D",
+    "INSTDATE": 1673308800000,
+    "ADDDATE": 1673364375000,
+    "MODDATE": 1673364476000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 89,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.587426872489,
+     44.641267260647
+    ]
+   },
+   "properties": {
+    "GLOBALID": "0140498b-5802-43de-b9f3-59f8cc615349",
+    "OBJECTID": 89,
+    "PRKPAYID": "PYP209",
+    "ASSETID": "PYP209",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2023,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie St",
+    "MAINTBY": "HRM",
+    "TID": "PS178",
+    "PKNGZONE": "D",
+    "INSTDATE": 1675728000000,
+    "ADDDATE": 1675860158000,
+    "MODDATE": 1675860227000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 90,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.586604965208,
+     44.6490760251496
+    ]
+   },
+   "properties": {
+    "GLOBALID": "bf8dc99a-4151-445a-9081-c0b1d7768c54",
+    "OBJECTID": 90,
+    "PRKPAYID": "PYP21",
+    "ASSETID": "PYP21",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Cogswell",
+    "MAINTBY": "HRM",
+    "TID": "PS161",
+    "PKNGZONE": "E",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 91,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5879418559802,
+     44.6422634609022
+    ]
+   },
+   "properties": {
+    "GLOBALID": "8885c128-5967-4545-a6c2-6e56e7e4c2b6",
+    "OBJECTID": 91,
+    "PRKPAYID": "PYP210",
+    "ASSETID": "PYP210",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2023,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie St",
+    "MAINTBY": "HRM",
+    "TID": "PS179",
+    "PKNGZONE": "D",
+    "INSTDATE": 1675728000000,
+    "ADDDATE": 1675860246000,
+    "MODDATE": 1675860303000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 92,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5723124510341,
+     44.6489906774187
+    ]
+   },
+   "properties": {
+    "GLOBALID": "b399124a-3029-403b-a0ae-bddfcf21c109",
+    "OBJECTID": 92,
+    "PRKPAYID": "PYP211",
+    "ASSETID": "PYP211",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2023,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "George St",
+    "MAINTBY": "HRM",
+    "TID": "PS180",
+    "PKNGZONE": "B",
+    "INSTDATE": 1684882800000,
+    "ADDDATE": 1684930132000,
+    "MODDATE": 1684930185000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 93,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5908549621908,
+     44.638793037423
+    ]
+   },
+   "properties": {
+    "GLOBALID": "474553f8-75a4-4763-b32c-f962e1924976",
+    "OBJECTID": 93,
+    "PRKPAYID": "PYP212",
+    "ASSETID": "PYP212",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2023,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "LeMarchant",
+    "MAINTBY": "HRM",
+    "TID": "PS182",
+    "PKNGZONE": "D",
+    "INSTDATE": 1690844400000,
+    "ADDDATE": 1690905875000,
+    "MODDATE": 1690905936000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 94,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5737666959183,
+     44.6409831747142
+    ]
+   },
+   "properties": {
+    "GLOBALID": "c7488591-57f1-4ecd-887d-f7f7c1619448",
+    "OBJECTID": 94,
+    "PRKPAYID": "PYP213",
+    "ASSETID": "PYP213",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2023,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Church St @ Morris",
+    "MAINTBY": "HRM",
+    "TID": "PS181",
+    "PKNGZONE": "C",
+    "INSTDATE": 1695250800000,
+    "ADDDATE": 1695317719000,
+    "MODDATE": 1695317798000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 95,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5743805452947,
+     44.6378368296768
+    ]
+   },
+   "properties": {
+    "GLOBALID": "8fbf8e16-c695-49c2-b73a-6eee9b4fe1be",
+    "OBJECTID": 95,
+    "PRKPAYID": "PYP214",
+    "ASSETID": "PYP214",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2023,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Fenwick",
+    "MAINTBY": "HRM",
+    "TID": "PS096",
+    "PKNGZONE": "F",
+    "INSTDATE": 1696978800000,
+    "ADDDATE": 1697041596000,
+    "MODDATE": 1697041667000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 96,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5864287921061,
+     44.6494013790293
+    ]
+   },
+   "properties": {
+    "GLOBALID": "f0273315-cd0e-4889-8bfe-edb3d741f137",
+    "OBJECTID": 96,
+    "PRKPAYID": "PYP22",
+    "ASSETID": "PYP22",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Cogswell",
+    "MAINTBY": "HRM",
+    "TID": "PS160",
+    "PKNGZONE": "E",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435009000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 97,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5852508833763,
+     44.6500070822755
+    ]
+   },
+   "properties": {
+    "GLOBALID": "f485c225-6808-46c3-9fe7-0c2eaf4b1180",
+    "OBJECTID": 97,
+    "PRKPAYID": "PYP23",
+    "ASSETID": "PYP23",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "North Park",
+    "MAINTBY": "HRM",
+    "TID": "PS172",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435001000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 98,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.586933138646,
+     44.6439104733971
+    ]
+   },
+   "properties": {
+    "GLOBALID": "68789d59-375a-4436-8dde-7d9201f7505f",
+    "OBJECTID": 98,
+    "PRKPAYID": "PYP236",
+    "ASSETID": "PYP236",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2024,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Veterans Memorial Lane",
+    "MAINTBY": "HRM",
+    "TID": "PS072",
+    "PKNGZONE": "D",
+    "INSTDATE": 1704340800000,
+    "ADDDATE": 1704383545000,
+    "MODDATE": 1704726549000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 99,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5863010516727,
+     44.6504705592575
+    ]
+   },
+   "properties": {
+    "GLOBALID": "9717ae24-0dc0-4655-89bb-505e40c4b792",
+    "OBJECTID": 99,
+    "PRKPAYID": "PYP24",
+    "ASSETID": "PYP24",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "North Park",
+    "MAINTBY": "HRM",
+    "TID": "PS026",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 100,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5794390466944,
+     44.6345597161228
+    ]
+   },
+   "properties": {
+    "GLOBALID": "2a422184-1b4a-483c-8b9a-197b0dd51d10",
+    "OBJECTID": 100,
+    "PRKPAYID": "PYP245",
+    "ASSETID": "PYP245",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2024,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Wellington St",
+    "MAINTBY": "HRM",
+    "TID": "PS183",
+    "PKNGZONE": "F",
+    "INSTDATE": 1710385200000,
+    "ADDDATE": 1710432117000,
+    "MODDATE": 1710432188000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 101,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5853286738867,
+     44.6488451794654
+    ]
+   },
+   "properties": {
+    "GLOBALID": "b6e0df8b-250a-48be-9ef2-7ce40f5ca66e",
+    "OBJECTID": 101,
+    "PRKPAYID": "PYP25",
+    "ASSETID": "PYP25",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Trollope",
+    "MAINTBY": "HRM",
+    "TID": "PS159",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435014000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 102,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5858125828555,
+     44.647544641648
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a1b0d154-23b8-4769-8834-b5a2fd829e0a",
+    "OBJECTID": 102,
+    "PRKPAYID": "PYP26",
+    "ASSETID": "PYP26",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Trollope",
+    "MAINTBY": "HRM",
+    "TID": "PS158",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435014000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 103,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5860572650743,
+     44.6386501039227
+    ]
+   },
+   "properties": {
+    "GLOBALID": "fa359182-3880-4a36-8c7f-fb3eacf49443",
+    "OBJECTID": 103,
+    "PRKPAYID": "PYP264",
+    "ASSETID": "PYP264",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2024,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie Street",
+    "MAINTBY": "HRM",
+    "TID": "PS185",
+    "PKNGZONE": "D",
+    "INSTDATE": 1725937200000,
+    "ADDDATE": 1725973772000,
+    "MODDATE": 1725973828000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 104,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5818476698214,
+     44.6297814608235
+    ]
+   },
+   "properties": {
+    "GLOBALID": "3f32ce8b-4230-46d4-bd5f-8877ff7f75ea",
+    "OBJECTID": 104,
+    "PRKPAYID": "PYP266",
+    "ASSETID": "PYP266",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2024,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie St",
+    "MAINTBY": "HRM",
+    "TID": "PS186",
+    "PKNGZONE": "F",
+    "INSTDATE": 1727233200000,
+    "ADDDATE": 1727274673000,
+    "MODDATE": 1727274726000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 105,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5821427133916,
+     44.6303617404516
+    ]
+   },
+   "properties": {
+    "GLOBALID": "fa94712d-c219-413d-9c38-a4b61d736e90",
+    "OBJECTID": 105,
+    "PRKPAYID": "PYP267",
+    "ASSETID": "PYP267",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2024,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie St",
+    "MAINTBY": "HRM",
+    "TID": "PS187",
+    "PKNGZONE": "F",
+    "INSTDATE": 1727233200000,
+    "ADDDATE": 1727274737000,
+    "MODDATE": 1727274789000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 106,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5833934224903,
+     44.6469418334055
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a6184739-d2b7-43cd-bf2a-642a148363f0",
+    "OBJECTID": 106,
+    "PRKPAYID": "PYP27",
+    "ASSETID": "PYP27",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Ahern",
+    "MAINTBY": "HRM",
+    "TID": "PS156",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 107,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5788114090768,
+     44.6337399383268
+    ]
+   },
+   "properties": {
+    "GLOBALID": "026c51d5-d6c8-495e-ac30-c684cf643333",
+    "OBJECTID": 107,
+    "PRKPAYID": "PYP270",
+    "ASSETID": "PYP270",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2024,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Inglis St",
+    "MAINTBY": "HRM",
+    "TID": "PS101",
+    "PKNGZONE": "F",
+    "INSTDATE": 1728961200000,
+    "ADDDATE": 1728998481000,
+    "MODDATE": 1728998584000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 108,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5741538877721,
+     44.6488493520573
+    ]
+   },
+   "properties": {
+    "GLOBALID": "76bd3cc8-e904-41d5-b005-14e982862a41",
+    "OBJECTID": 108,
+    "PRKPAYID": "PYP275",
+    "ASSETID": "PYP275",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2024,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Granville St",
+    "MAINTBY": "HRM",
+    "TID": "PS052",
+    "PKNGZONE": "B",
+    "INSTDATE": 1734494400000,
+    "ADDDATE": 1734614015000,
+    "MODDATE": 1734614086000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 109,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5837741581521,
+     44.6473071444778
+    ]
+   },
+   "properties": {
+    "GLOBALID": "822dd2a4-ef79-48ec-8e69-f90e083d59a7",
+    "OBJECTID": 109,
+    "PRKPAYID": "PYP28",
+    "ASSETID": "PYP28",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Ahern",
+    "MAINTBY": "HRM",
+    "TID": "PS157",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 110,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5912049170795,
+     44.6394217874915
+    ]
+   },
+   "properties": {
+    "GLOBALID": "91b400b1-158c-457a-93f1-a70d0829fd02",
+    "OBJECTID": 110,
+    "PRKPAYID": "PYP281",
+    "ASSETID": "PYP281",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2025,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "LeMarchant",
+    "MAINTBY": "HRM",
+    "TID": "PS184",
+    "PKNGZONE": "E",
+    "INSTDATE": 1741060800000,
+    "ADDDATE": 1741113624000,
+    "MODDATE": 1741801892000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 111,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5742971654666,
+     44.6477828561915
+    ]
+   },
+   "properties": {
+    "GLOBALID": "67bfba40-5347-4258-b45f-2152a8d1583f",
+    "OBJECTID": 111,
+    "PRKPAYID": "PYP286",
+    "ASSETID": "PYP286",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2025,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Barrington St",
+    "MAINTBY": "HRM",
+    "TID": "PS039",
+    "PKNGZONE": "B",
+    "INSTDATE": 1747018800000,
+    "ADDDATE": 1747069194000,
+    "MODDATE": 1747069250000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 112,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5853184905846,
+     44.6514417140296
+    ]
+   },
+   "properties": {
+    "GLOBALID": "49a9464b-4052-4d88-a32c-dec78e13229f",
+    "OBJECTID": 112,
+    "PRKPAYID": "PYP29",
+    "ASSETID": "PYP29",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Nora Bernard",
+    "MAINTBY": "HRM",
+    "TID": "PS028",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1712579240000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 113,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5777177874735,
+     44.6424678448751
+    ]
+   },
+   "properties": {
+    "GLOBALID": "fe308f4f-b30f-42dc-bc2a-25b44425674f",
+    "OBJECTID": 113,
+    "PRKPAYID": "PYP291",
+    "ASSETID": "PYP291",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2025,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Dresden Row",
+    "MAINTBY": "HRM",
+    "TID": "PS192",
+    "PKNGZONE": "C",
+    "INSTDATE": 1754967600000,
+    "ADDDATE": 1755007384000,
+    "MODDATE": 1755007462000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 114,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.576781696235,
+     44.6427541056066
+    ]
+   },
+   "properties": {
+    "GLOBALID": "5997ba33-747b-4fe3-9629-1648e8f8814d",
+    "OBJECTID": 114,
+    "PRKPAYID": "PYP292",
+    "ASSETID": "PYP292",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2025,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Birmingham St",
+    "MAINTBY": "HRM",
+    "TID": "PS191",
+    "PKNGZONE": "C",
+    "INSTDATE": null,
+    "ADDDATE": 1755007474000,
+    "MODDATE": 1755007516000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 115,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5846459982882,
+     44.6519753116503
+    ]
+   },
+   "properties": {
+    "GLOBALID": "d758a258-de4f-48b8-9983-a7f3d25c0e44",
+    "OBJECTID": 115,
+    "PRKPAYID": "PYP30",
+    "ASSETID": "PYP30",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Nora Bernard",
+    "MAINTBY": "HRM",
+    "TID": "PS029",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1697633899000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 116,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5807678157981,
+     44.6535126394147
+    ]
+   },
+   "properties": {
+    "GLOBALID": "ebda8caf-c1ba-48dd-98dc-c4d4c42ea0ef",
+    "OBJECTID": 116,
+    "PRKPAYID": "PYP300",
+    "ASSETID": "PYP300",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2026,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Amalamek Way",
+    "MAINTBY": "HRM",
+    "TID": "PS064",
+    "PKNGZONE": "A",
+    "INSTDATE": 1768276800000,
+    "ADDDATE": 1768325518000,
+    "MODDATE": 1768325575000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 117,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5875994029225,
+     44.6489322018131
+    ]
+   },
+   "properties": {
+    "GLOBALID": "cbba9da5-e33b-4cce-9190-e398738a4ef9",
+    "OBJECTID": 117,
+    "PRKPAYID": "PYP301",
+    "ASSETID": "PYP301",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2026,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Cogswell St",
+    "MAINTBY": "HRM",
+    "TID": "PS164",
+    "PKNGZONE": "E",
+    "INSTDATE": null,
+    "ADDDATE": 1773162718000,
+    "MODDATE": 1773162770000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 118,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5816028645334,
+     44.6516021497852
+    ]
+   },
+   "properties": {
+    "GLOBALID": "2318a9a3-5379-4292-9fd2-2e018b8e587e",
+    "OBJECTID": 118,
+    "PRKPAYID": "PYP31",
+    "ASSETID": "PYP31",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Portland place",
+    "MAINTBY": "HRM",
+    "TID": "PS030",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435001000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 119,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5801761422328,
+     44.6498434671833
+    ]
+   },
+   "properties": {
+    "GLOBALID": "fc36190b-bdaa-423f-9824-7b547657a22e",
+    "OBJECTID": 119,
+    "PRKPAYID": "PYP32",
+    "ASSETID": "PYP32",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Gottingen",
+    "MAINTBY": "HRM",
+    "TID": "PS034",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 120,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5809103972983,
+     44.650266543465
+    ]
+   },
+   "properties": {
+    "GLOBALID": "7db5498d-9466-48fe-9b9d-8eb8e12d953e",
+    "OBJECTID": 120,
+    "PRKPAYID": "PYP33",
+    "ASSETID": "PYP33",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Gottingen",
+    "MAINTBY": "HRM",
+    "TID": "PS033",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435005000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 121,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5799780897638,
+     44.6517076909906
+    ]
+   },
+   "properties": {
+    "GLOBALID": "483ba73d-2aa1-4b33-ad81-3a7b60495112",
+    "OBJECTID": 121,
+    "PRKPAYID": "PYP34",
+    "ASSETID": "PYP34",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brunswick",
+    "MAINTBY": "HRM",
+    "TID": "PS031",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 122,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5798987694226,
+     44.6518618894957
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e3309ee8-0989-49a9-90a0-274fea8873bf",
+    "OBJECTID": 122,
+    "PRKPAYID": "PYP35",
+    "ASSETID": "PYP35",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brunswick",
+    "MAINTBY": "HRM",
+    "TID": "PS032",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 123,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5782150283394,
+     44.6494802791281
+    ]
+   },
+   "properties": {
+    "GLOBALID": "f404151b-1f59-43e4-bd24-5a11cc8461c4",
+    "OBJECTID": 123,
+    "PRKPAYID": "PYP36",
+    "ASSETID": "PYP36",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brunswick",
+    "MAINTBY": "HRM",
+    "TID": "PS037",
+    "PKNGZONE": "A",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435014000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 124,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.578101941225,
+     44.6494989395906
+    ]
+   },
+   "properties": {
+    "GLOBALID": "b7ab56bc-e639-4039-97e9-b8626ea81a8e",
+    "OBJECTID": 124,
+    "PRKPAYID": "PYP37",
+    "ASSETID": "PYP37",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brunswick",
+    "MAINTBY": "HRM",
+    "TID": "PS040",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435004000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 125,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5774403490862,
+     44.6478883807004
+    ]
+   },
+   "properties": {
+    "GLOBALID": "8e63f88f-3d96-4e16-8798-c011156abeef",
+    "OBJECTID": 125,
+    "PRKPAYID": "PYP38",
+    "ASSETID": "PYP38",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brunswick",
+    "MAINTBY": "HRM",
+    "TID": "PS042",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435012000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 126,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5769947182299,
+     44.6474269895631
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a72e5b63-0d1a-406b-8631-e8badfb64f29",
+    "OBJECTID": 126,
+    "PRKPAYID": "PYP39",
+    "ASSETID": "PYP39",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brunswick",
+    "MAINTBY": "HRM",
+    "TID": "PS043",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435006000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 127,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5769378378045,
+     44.646872015409
+    ]
+   },
+   "properties": {
+    "GLOBALID": "bd26a0b3-c7f8-4223-9f41-7e90416ca0a8",
+    "OBJECTID": 127,
+    "PRKPAYID": "PYP40",
+    "ASSETID": "PYP40",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brunswick",
+    "MAINTBY": "HRM",
+    "TID": "PS044",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435006000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 128,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5767934560804,
+     44.6455022860615
+    ]
+   },
+   "properties": {
+    "GLOBALID": "b038ca80-3843-443f-af8e-a7a4ff0beecc",
+    "OBJECTID": 128,
+    "PRKPAYID": "PYP41",
+    "ASSETID": "PYP41",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Sackville",
+    "MAINTBY": "HRM",
+    "TID": "PS075",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1783358362000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 129,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.575627127533,
+     44.6447927896352
+    ]
+   },
+   "properties": {
+    "GLOBALID": "ff2e469a-e9d6-4395-ad45-46f07f05ecd4",
+    "OBJECTID": 129,
+    "PRKPAYID": "PYP42",
+    "ASSETID": "PYP42",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Brunswick",
+    "MAINTBY": "HRM",
+    "TID": "PS065",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 130,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5723352520726,
+     44.6436933960211
+    ]
+   },
+   "properties": {
+    "GLOBALID": "49f28b57-6012-4248-9cf4-4ea8e5215b34",
+    "OBJECTID": 130,
+    "PRKPAYID": "PYP44",
+    "ASSETID": "PYP44",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Barrington",
+    "MAINTBY": "HRM",
+    "TID": "PS106",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435015000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 131,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.571734388742,
+     44.64254224069
+    ]
+   },
+   "properties": {
+    "GLOBALID": "8074adfd-e54c-4fbd-b73a-496af9221b54",
+    "OBJECTID": 131,
+    "PRKPAYID": "PYP45",
+    "ASSETID": "PYP45",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Barrington",
+    "MAINTBY": "HRM",
+    "TID": "PS109",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435006000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 132,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5717150525055,
+     44.6428544774729
+    ]
+   },
+   "properties": {
+    "GLOBALID": "cee9aa2a-0f0e-4358-8680-f8d7bbeefbe4",
+    "OBJECTID": 132,
+    "PRKPAYID": "PYP46",
+    "ASSETID": "PYP46",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Barrington",
+    "MAINTBY": "HRM",
+    "TID": "PS108",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435004000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 133,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5719307389036,
+     44.6432344105044
+    ]
+   },
+   "properties": {
+    "GLOBALID": "f6ff460a-e1b2-4884-afb1-90a71f63676b",
+    "OBJECTID": 133,
+    "PRKPAYID": "PYP47",
+    "ASSETID": "PYP47",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Barrington",
+    "MAINTBY": "HRM",
+    "TID": "PS107",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435004000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 134,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5707335056154,
+     44.6405562333692
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e754bc67-3f67-469e-9186-7800337d5c30",
+    "OBJECTID": 134,
+    "PRKPAYID": "PYP48",
+    "ASSETID": "PYP48",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Barrington",
+    "MAINTBY": "HRM",
+    "TID": "PS092",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435001000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 135,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.570113040147,
+     44.6395963071224
+    ]
+   },
+   "properties": {
+    "GLOBALID": "246ebbe5-ef1b-4b70-b36d-5c48afdf3712",
+    "OBJECTID": 135,
+    "PRKPAYID": "PYP50",
+    "ASSETID": "PYP50",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Hollis",
+    "MAINTBY": "HRM",
+    "TID": "PS094",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1676995003000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 136,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5691206146587,
+     44.6401295714009
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a5c40223-4ca9-4e69-a4a3-5ed977ffbc91",
+    "OBJECTID": 136,
+    "PRKPAYID": "PYP51",
+    "ASSETID": "PYP51",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Hollis",
+    "MAINTBY": "HRM",
+    "TID": "PS095",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435015000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 137,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5699331309517,
+     44.6443452961654
+    ]
+   },
+   "properties": {
+    "GLOBALID": "3257e595-5065-483f-88f5-f490ac37fbd4",
+    "OBJECTID": 137,
+    "PRKPAYID": "PYP55",
+    "ASSETID": "PYP55",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Lower Water",
+    "MAINTBY": "HRM",
+    "TID": "PS103",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435004000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 138,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5710103241652,
+     44.6442325525533
+    ]
+   },
+   "properties": {
+    "GLOBALID": "4f45df07-4405-4a68-9707-0cb18c11bf0c",
+    "OBJECTID": 138,
+    "PRKPAYID": "PYP57",
+    "ASSETID": "PYP57",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Hollis",
+    "MAINTBY": "HRM",
+    "TID": "PS104",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435012000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 139,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5695573629735,
+     44.64140263721
+    ]
+   },
+   "properties": {
+    "GLOBALID": "3cc1490e-c869-4364-a8db-17679ac2498b",
+    "OBJECTID": 139,
+    "PRKPAYID": "PYP58",
+    "ASSETID": "PYP58",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Hollis",
+    "MAINTBY": "HRM",
+    "TID": "PS098",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435006000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 140,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.569847067856,
+     44.6421667657373
+    ]
+   },
+   "properties": {
+    "GLOBALID": "d3ce6014-d75c-4a77-b24b-96b7aed31ca2",
+    "OBJECTID": 140,
+    "PRKPAYID": "PYP60",
+    "ASSETID": "PYP60",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Morris",
+    "MAINTBY": "HRM",
+    "TID": "PS100",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435012000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 141,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.571042482954,
+     44.641852147567
+    ]
+   },
+   "properties": {
+    "GLOBALID": "f4fad08d-5714-45bf-a818-3044984c5ecd",
+    "OBJECTID": 141,
+    "PRKPAYID": "PYP61",
+    "ASSETID": "PYP61",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Morris",
+    "MAINTBY": "HRM",
+    "TID": "PS099",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435001000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 142,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5724788819068,
+     44.6414719849705
+    ]
+   },
+   "properties": {
+    "GLOBALID": "50fb94bb-5dbf-433b-bac5-e91568e43664",
+    "OBJECTID": 142,
+    "PRKPAYID": "PYP62",
+    "ASSETID": "PYP62",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Morris",
+    "MAINTBY": "HRM",
+    "TID": "PS090",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435004000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 143,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5746975850129,
+     44.6406920820246
+    ]
+   },
+   "properties": {
+    "GLOBALID": "200fe553-c416-4e18-a82d-28fe06e8a1f5",
+    "OBJECTID": 143,
+    "PRKPAYID": "PYP63",
+    "ASSETID": "PYP63",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Queen",
+    "MAINTBY": "HRM",
+    "TID": "PS089",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435006000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 144,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5865538366953,
+     44.6375246042427
+    ]
+   },
+   "properties": {
+    "GLOBALID": "82b90138-eac3-456d-8f85-aab179cc5281",
+    "OBJECTID": 144,
+    "PRKPAYID": "PYP64",
+    "ASSETID": "PYP64",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Edward",
+    "MAINTBY": "HRM",
+    "TID": "PS116",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435015000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 145,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5869117452675,
+     44.6381918276528
+    ]
+   },
+   "properties": {
+    "GLOBALID": "7be6c354-3604-4c15-9c5a-ce2d06168f8c",
+    "OBJECTID": 145,
+    "PRKPAYID": "PYP65",
+    "ASSETID": "PYP65",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Edward",
+    "MAINTBY": "HRM",
+    "TID": "PS117",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435006000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 146,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5878137454409,
+     44.637899273795
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a9803207-f312-48d7-a498-4133a5aee605",
+    "OBJECTID": 146,
+    "PRKPAYID": "PYP66",
+    "ASSETID": "PYP66",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Henry",
+    "MAINTBY": "HRM",
+    "TID": "PS114",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1759319699000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 147,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5875243235277,
+     44.6372563729387
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e897f520-e225-477d-b53f-72a177408ec3",
+    "OBJECTID": 147,
+    "PRKPAYID": "PYP67",
+    "ASSETID": "PYP67",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Henry",
+    "MAINTBY": "HRM",
+    "TID": "PS115",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435001000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 148,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5885966038548,
+     44.6371046911888
+    ]
+   },
+   "properties": {
+    "GLOBALID": "18ce5a5b-7f37-4723-85e6-2f2331c81fac",
+    "OBJECTID": 148,
+    "PRKPAYID": "PYP68",
+    "ASSETID": "PYP68",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Seymour",
+    "MAINTBY": "HRM",
+    "TID": "PS112",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435001000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 149,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5889341125851,
+     44.6377374552438
+    ]
+   },
+   "properties": {
+    "GLOBALID": "a2856274-5b5b-464a-9d99-913605021f37",
+    "OBJECTID": 149,
+    "PRKPAYID": "PYP69",
+    "ASSETID": "PYP69",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Seymour",
+    "MAINTBY": "HRM",
+    "TID": "PS113",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435017000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 150,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5903951002239,
+     44.6376112766668
+    ]
+   },
+   "properties": {
+    "GLOBALID": "4c8b1e6b-d5e1-4347-8229-2bafa6b8a6c6",
+    "OBJECTID": 150,
+    "PRKPAYID": "PYP70",
+    "ASSETID": "PYP70",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "LeMarchant",
+    "MAINTBY": "HRM",
+    "TID": "PS110",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435012000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 151,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5896170253389,
+     44.6362089985815
+    ]
+   },
+   "properties": {
+    "GLOBALID": "fac1192f-bd2f-476c-91b2-c7c26305fda6",
+    "OBJECTID": 151,
+    "PRKPAYID": "PYP71",
+    "ASSETID": "PYP71",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "LeMarchant",
+    "MAINTBY": "HRM",
+    "TID": "PS111",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435002000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 152,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5850460477286,
+     44.6370714123539
+    ]
+   },
+   "properties": {
+    "GLOBALID": "1a0f763d-c1b1-415a-a18a-9f145098db76",
+    "OBJECTID": 152,
+    "PRKPAYID": "PYP72",
+    "ASSETID": "PYP72",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie",
+    "MAINTBY": "HRM",
+    "TID": "PS119",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435006000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 153,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.585414807051,
+     44.6374177044738
+    ]
+   },
+   "properties": {
+    "GLOBALID": "34efb547-a280-492f-a33f-5c0b8bf6bd07",
+    "OBJECTID": 153,
+    "PRKPAYID": "PYP73",
+    "ASSETID": "PYP73",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie",
+    "MAINTBY": "HRM",
+    "TID": "PS118",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435017000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 154,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5857755030955,
+     44.6388339102005
+    ]
+   },
+   "properties": {
+    "GLOBALID": "3fd7ce5e-4111-4c0e-82a8-18155e48fbfb",
+    "OBJECTID": 154,
+    "PRKPAYID": "PYP74",
+    "ASSETID": "PYP74",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie",
+    "MAINTBY": "HRM",
+    "TID": "PS121",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435020000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 155,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5863636058575,
+     44.6398714039599
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e32020d4-f0ab-42a7-9daf-238a1474329a",
+    "OBJECTID": 155,
+    "PRKPAYID": "PYP75",
+    "ASSETID": "PYP75",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie",
+    "MAINTBY": "HRM",
+    "TID": "PS122",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435002000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 156,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5868355798095,
+     44.6407878771326
+    ]
+   },
+   "properties": {
+    "GLOBALID": "0870df20-9bd5-48dd-8f47-fcf08e89a314",
+    "OBJECTID": 156,
+    "PRKPAYID": "PYP76",
+    "ASSETID": "PYP76",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Robie",
+    "MAINTBY": "HRM",
+    "TID": "PS123",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435002000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 157,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5840989575178,
+     44.6427016234491
+    ]
+   },
+   "properties": {
+    "GLOBALID": "578cc817-7294-46cd-aa81-9c20a1831525",
+    "OBJECTID": 157,
+    "PRKPAYID": "PYP78",
+    "ASSETID": "PYP78",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Summer",
+    "MAINTBY": "HRM",
+    "TID": "PS153",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600052400000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435007000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 158,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5837830092526,
+     44.6425606624231
+    ]
+   },
+   "properties": {
+    "GLOBALID": "4e6e00bb-a542-4fb6-95bc-d433292d8ab0",
+    "OBJECTID": 158,
+    "PRKPAYID": "PYP79",
+    "ASSETID": "PYP79",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Summer",
+    "MAINTBY": "HRM",
+    "TID": "PS152",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435020000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 159,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5833908200709,
+     44.6417833339626
+    ]
+   },
+   "properties": {
+    "GLOBALID": "0104c033-2e2c-4de5-af67-85a872988f01",
+    "OBJECTID": 159,
+    "PRKPAYID": "PYP80",
+    "ASSETID": "PYP80",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Summer",
+    "MAINTBY": "HRM",
+    "TID": "PS154",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435007000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 160,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5829324762568,
+     44.6408257137054
+    ]
+   },
+   "properties": {
+    "GLOBALID": "ebdd1951-008f-454f-8085-f36bd6396168",
+    "OBJECTID": 160,
+    "PRKPAYID": "PYP81",
+    "ASSETID": "PYP81",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Summer",
+    "MAINTBY": "HRM",
+    "TID": "PS133",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435013000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 161,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5825430242418,
+     44.6396970455924
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e1daaa62-e9fd-407d-b8fb-9ad0070980aa",
+    "OBJECTID": 161,
+    "PRKPAYID": "PYP82",
+    "ASSETID": "PYP82",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Summer",
+    "MAINTBY": "HRM",
+    "TID": "PS135",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435017000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 162,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5824924958036,
+     44.6400667774933
+    ]
+   },
+   "properties": {
+    "GLOBALID": "8deedb66-b846-4d35-97d3-887fc7243206",
+    "OBJECTID": 162,
+    "PRKPAYID": "PYP83",
+    "ASSETID": "PYP83",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Summer",
+    "MAINTBY": "HRM",
+    "TID": "PS134",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435017000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 163,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5735854796743,
+     44.6492072754721
+    ]
+   },
+   "properties": {
+    "GLOBALID": "30c0a3dc-3d54-4430-9472-886c2dff8d46",
+    "OBJECTID": 163,
+    "PRKPAYID": "PYP84",
+    "ASSETID": "PYP84",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Hollis",
+    "MAINTBY": "HRM",
+    "TID": "PS053",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435010000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 164,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5731104640268,
+     44.648283727622
+    ]
+   },
+   "properties": {
+    "GLOBALID": "11541784-596f-4437-9a92-6feea841f164",
+    "OBJECTID": 164,
+    "PRKPAYID": "PYP85",
+    "ASSETID": "PYP85",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Hollis",
+    "MAINTBY": "HRM",
+    "TID": "PS055",
+    "PKNGZONE": "B",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435007000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 165,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5801893016534,
+     44.6396869458022
+    ]
+   },
+   "properties": {
+    "GLOBALID": "d7216afe-8e50-47a4-867c-778c8e5af4b2",
+    "OBJECTID": 165,
+    "PRKPAYID": "PYP86",
+    "ASSETID": "PYP86",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "University",
+    "MAINTBY": "HRM",
+    "TID": "PS138",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435007000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 166,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5819843862211,
+     44.6392290056269
+    ]
+   },
+   "properties": {
+    "GLOBALID": "93f89589-c275-48f8-9277-8ed6ecb4445f",
+    "OBJECTID": 166,
+    "PRKPAYID": "PYP87",
+    "ASSETID": "PYP87",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "University",
+    "MAINTBY": "HRM",
+    "TID": "PS136",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435007000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 167,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.583966095789,
+     44.6387104288649
+    ]
+   },
+   "properties": {
+    "GLOBALID": "c29d37c2-879e-4e37-833a-2db8548bc3e5",
+    "OBJECTID": 167,
+    "PRKPAYID": "PYP88",
+    "ASSETID": "PYP88",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "University",
+    "MAINTBY": "HRM",
+    "TID": "PS126",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435017000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 168,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5848775085099,
+     44.6381688399801
+    ]
+   },
+   "properties": {
+    "GLOBALID": "96a58f0e-92d3-4159-b32f-bbf9ac0e4a62",
+    "OBJECTID": 168,
+    "PRKPAYID": "PYP89",
+    "ASSETID": "PYP89",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "University",
+    "MAINTBY": "HRM",
+    "TID": "PS120",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435018000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 169,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5808105046387,
+     44.6392678307672
+    ]
+   },
+   "properties": {
+    "GLOBALID": "cf7ea40d-4e5e-4048-ae97-26619407b4a0",
+    "OBJECTID": 169,
+    "PRKPAYID": "PYP91",
+    "ASSETID": "PYP91",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "University",
+    "MAINTBY": "HRM",
+    "TID": "PS137",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435002000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 170,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5796026891965,
+     44.6403352834364
+    ]
+   },
+   "properties": {
+    "GLOBALID": "ed0d3a7e-83a8-4027-8ffa-23685d6f5b53",
+    "OBJECTID": 170,
+    "PRKPAYID": "PYP92",
+    "ASSETID": "PYP92",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Cathedral",
+    "MAINTBY": "HRM",
+    "TID": "PS140",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435004000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 171,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5799316585417,
+     44.6413135639784
+    ]
+   },
+   "properties": {
+    "GLOBALID": "fb449ea4-57f4-4750-a6b2-db17834b7ade",
+    "OBJECTID": 171,
+    "PRKPAYID": "PYP93",
+    "ASSETID": "PYP93",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "Cathedral",
+    "MAINTBY": "HRM",
+    "TID": "PS143",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435007000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 172,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5790398066361,
+     44.6406976773688
+    ]
+   },
+   "properties": {
+    "GLOBALID": "5b493a91-2a50-4cf3-a2ed-b49adafd0216",
+    "OBJECTID": 172,
+    "PRKPAYID": "PYP94",
+    "ASSETID": "PYP94",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "South Park",
+    "MAINTBY": "HRM",
+    "TID": "PS141",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435013000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 173,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5793649877858,
+     44.6413368073509
+    ]
+   },
+   "properties": {
+    "GLOBALID": "e4e981c3-248f-4bf2-8b2e-06caab0f394b",
+    "OBJECTID": 173,
+    "PRKPAYID": "PYP95",
+    "ASSETID": "PYP95",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "South Park",
+    "MAINTBY": "HRM",
+    "TID": "PS142",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435015000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 174,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5793465920854,
+     44.6416825019619
+    ]
+   },
+   "properties": {
+    "GLOBALID": "596e081a-51ad-4c37-af32-e069d181a02f",
+    "OBJECTID": 174,
+    "PRKPAYID": "PYP96",
+    "ASSETID": "PYP96",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "South park",
+    "MAINTBY": "HRM",
+    "TID": "PS144",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600138800000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435020000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 175,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5787499777861,
+     44.640525109264
+    ]
+   },
+   "properties": {
+    "GLOBALID": "846264b5-c28c-4a65-8ef2-16faa699e538",
+    "OBJECTID": 175,
+    "PRKPAYID": "PYP97",
+    "ASSETID": "PYP97",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "South Park",
+    "MAINTBY": "HRM",
+    "TID": "PS087",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600311600000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435007000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 176,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5782299466614,
+     44.6390339117963
+    ]
+   },
+   "properties": {
+    "GLOBALID": "ed3175b8-e4af-40c8-bd30-f7098595d391",
+    "OBJECTID": 176,
+    "PRKPAYID": "PYP98",
+    "ASSETID": "PYP98",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "South Park",
+    "MAINTBY": "HRM",
+    "TID": "PS139",
+    "PKNGZONE": "D",
+    "INSTDATE": 1600398000000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435015000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 177,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.5782984611681,
+     44.6396822861301
+    ]
+   },
+   "properties": {
+    "GLOBALID": "068ff6c3-2ef6-432e-af6d-6a2aeb1f0c4d",
+    "OBJECTID": 177,
+    "PRKPAYID": "PYP99",
+    "ASSETID": "PYP99",
+    "ASSETCODE": "PRKPAY",
+    "OWNER": "HRM",
+    "INSTYR": 2020,
+    "INSTYRCONF": 1,
+    "LOCGEN": "ROW",
+    "ASSETSTAT": "INS",
+    "LOCATION": "South Park",
+    "MAINTBY": "HRM",
+    "TID": "PS088",
+    "PKNGZONE": "C",
+    "INSTDATE": 1600225200000,
+    "ADDDATE": 1613139736000,
+    "MODDATE": 1621435020000,
+    "SDATE": null,
+    "SOURCE": null,
+    "SACC": null
+   }
+  }
+ ]
+}

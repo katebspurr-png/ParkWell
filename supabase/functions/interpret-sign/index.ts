@@ -47,7 +47,12 @@ Rules:
 - Answer for the specific local time provided, not in general.
 - If multiple signs stack, combine them the way an enforcement officer would.
 - If the sign is partially unreadable or ambiguous, say so and use level "unknown" with low confidence — never guess confidently.
-- Keep the summary to one sentence in plain language ("You can park here until 6 pm, but you have to pay at the kiosk").`;
+- Keep the summary to one sentence in plain language ("You can park here until 6 pm, but you have to pay at the kiosk").
+
+Halifax (HRM) local conventions:
+- Loading zones are active 8 am–6 pm unless the sign says 24H — outside those hours they are ordinary legal parking.
+- Paid zones (A–J) run weekdays 8 am–6 pm, plus Saturdays 8 am–6 pm starting July 18, 2026.
+- The overnight winter parking ban (1–6 am, declared ad hoc in winter) is not posted on signs — do not assume it; mention it only if a sign references it.`;
 
 Deno.serve(async (req) => {
   if (req.method !== "POST") {

@@ -87,6 +87,37 @@ bridging into CarPlay, and the audio-first interaction (no phone touches
 while driving) matches the CarPlay Parking-category rules. Apply for the
 CarPlay entitlement as soon as Phase 1 validates — it has review lead time.
 
+## Data sources (updated after HRM open-data discovery)
+
+The handoff doc assumed no public GIS existed — wrong, happily. HRM's open
+data org (`data-hrm.hub.arcgis.com`) publishes queryable feature services,
+imported by `tools/hrm-import/import_hrm.py` into rows tagged
+`source = 'hrm_arcgis'` (re-imports replace only their own rows; hand-mapped
+`source = 'manual'` data is never touched):
+
+| Layer | Import target |
+|---|---|
+| Parking Pay Zones (A–J polygons) | `zones.boundary` |
+| Commuter Permit Parking Streets (321 lines) | segments + `permit_only` rules |
+| Accessible Parking Spots (306 points) | ~20 m stub segments + `accessible` rules |
+| Winter ban Zone 1 / Zone 2 polygons | `winter_ban_zones` |
+| Parking Pay Stations (176 points) | `tools/hrm-import/pay_stations.geojson` (mapping aid) |
+
+What the open data does **not** provide: time windows/paid hours (policy,
+encoded by us), per-block time limits and loading zones (still needs the
+sign walk), and a live winter-ban on/off flag (still the scraper's job —
+though the zone polygons now let us scope a declared ban to the right area).
+
+### Mapping conventions (Halifax)
+
+- **Loading zones default to 8 am–6 pm** unless the sign says 24H — outside
+  posted hours they're ordinary legal parking. Only an explicitly 24H sign
+  maps to an empty (= always active) windows array.
+- Paid zones: weekdays 8 am–6 pm; Saturdays 8 am–6 pm from 2026-07-18
+  (shipped as an `effective_from` window, already in the seed).
+- Imported permit-street rules have **unverified hours** (flagged in their
+  notes) — the verification walk should confirm posted windows.
+
 ## What's scaffolded vs. real
 
 - ✅ Rule engine + tests, segment matching, audio ducking, Live Activity,
