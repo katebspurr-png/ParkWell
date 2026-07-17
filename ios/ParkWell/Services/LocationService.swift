@@ -32,7 +32,14 @@ final class LocationService: NSObject, ObservableObject {
     }
 
     func startTracking() {
-        manager.allowsBackgroundLocationUpdates = authorizationStatus == .authorizedAlways
+        // While-Using permission is enough for background updates as long as
+        // tracking starts in the foreground (the app has the `location`
+        // background mode). Gating this on Always — as an earlier version
+        // did — silently froze the pipeline when the phone locked in the car.
+        let authorized = authorizationStatus == .authorizedWhenInUse
+            || authorizationStatus == .authorizedAlways
+        manager.allowsBackgroundLocationUpdates = authorized
+        manager.showsBackgroundLocationIndicator = true
         manager.startUpdatingLocation()
     }
 
