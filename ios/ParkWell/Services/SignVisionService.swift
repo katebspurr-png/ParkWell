@@ -31,7 +31,9 @@ struct SignVisionService {
         var request = URLRequest(url: baseURL.appending(path: "/functions/v1/interpret-sign"))
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(anonKey)", forHTTPHeaderField: "Authorization")
+        // Publishable key in the apikey header; the function is deployed with
+        // --no-verify-jwt since publishable keys aren't JWTs.
+        request.setValue(anonKey, forHTTPHeaderField: "apikey")
 
         let body: [String: Any] = [
             "image_base64": jpeg.base64EncodedString(),

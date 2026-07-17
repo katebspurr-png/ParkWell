@@ -53,7 +53,7 @@ supabase init          # if not linked yet
 supabase db push       # applies migrations/0001_initial_schema.sql
 supabase db seed       # loads the SAMPLE dev dataset
 supabase secrets set ANTHROPIC_API_KEY=sk-ant-...
-supabase functions deploy interpret-sign
+supabase functions deploy interpret-sign --no-verify-jwt
 supabase functions deploy hrm-alerts --no-verify-jwt
 ```
 

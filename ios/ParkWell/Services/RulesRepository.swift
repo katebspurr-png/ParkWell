@@ -58,8 +58,9 @@ actor RulesRepository {
     private func get<T: Decodable>(_ table: String, query: String) async throws -> T {
         var request = URLRequest(url: baseURL.appending(path: "/rest/v1/\(table)")
             .appending(queryItems: URLQueryItem.parse(query)))
+        // Publishable (sb_publishable_...) keys go in the apikey header only —
+        // they are not JWTs and must not be sent as a Bearer token.
         request.setValue(anonKey, forHTTPHeaderField: "apikey")
-        request.setValue("Bearer \(anonKey)", forHTTPHeaderField: "Authorization")
         let (data, response) = try await session.data(for: request)
         guard let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode) else {
             throw URLError(.badServerResponse)

@@ -3,7 +3,9 @@
 // vision capability. The Anthropic API key stays server-side; the app only
 // holds the Supabase anon key.
 //
-// Deploy:  supabase functions deploy interpret-sign
+// Deploy:  supabase functions deploy interpret-sign --no-verify-jwt
+//          (the app authenticates with the publishable key via the apikey
+//          header; publishable keys aren't JWTs, so JWT verification is off)
 // Env:     supabase secrets set ANTHROPIC_API_KEY=sk-ant-...
 //
 // Request:  { image_base64, media_type, local_time?, timezone? }
