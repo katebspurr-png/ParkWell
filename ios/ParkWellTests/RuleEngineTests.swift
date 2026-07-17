@@ -87,12 +87,34 @@ final class RuleEngineTests: XCTestCase {
 
     // MARK: - Dynamic overlays
 
-    func testWinterBanOverridesEverything() {
+    func testWinterBanIsRedDuringBanHours() {
+        // 2 a.m. — inside HRM's 1–6 a.m. enforcement window
         let now = date(2026, 1, 14, 2, 0)
         let verdict = engine.verdict(segment: paidSegment(),
                                      overlays: freshOverlays(banActive: true, at: now), at: now)
         XCTAssertEqual(verdict.level, .red)
         XCTAssertEqual(verdict.headline, "Winter parking ban")
+    }
+
+    func testDeclaredBanOutsideBanHoursIsAdvisoryOnly() {
+        // Wednesday 10 a.m. — ban declared for tonight, but parking is legal
+        // now (paid hours active), so the verdict stays yellow with a warning.
+        let now = date(2026, 1, 14, 10, 0)
+        let verdict = engine.verdict(segment: paidSegment(),
+                                     overlays: freshOverlays(banActive: true, at: now), at: now)
+        XCTAssertEqual(verdict.level, .yellow)
+        XCTAssertEqual(verdict.headline, "Paid parking")
+        XCTAssertTrue(verdict.detail.contains("Winter ban tonight"))
+        XCTAssertTrue(verdict.spoken.contains("Winter ban tonight"))
+    }
+
+    func testDeclaredBanEveningGreenGetsAdvisory() {
+        // 11 p.m. — free parking now, but the driver must know about 1 a.m.
+        let now = date(2026, 1, 14, 23, 0)
+        let verdict = engine.verdict(segment: paidSegment(),
+                                     overlays: freshOverlays(banActive: true, at: now), at: now)
+        XCTAssertEqual(verdict.level, .green)
+        XCTAssertTrue(verdict.detail.contains("Winter ban tonight"))
     }
 
     func testStreetCleaningIsRedDuringWindow() {

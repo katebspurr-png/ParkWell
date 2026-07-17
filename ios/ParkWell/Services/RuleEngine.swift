@@ -42,12 +42,15 @@ struct RuleEngine {
             )
         }
 
-        // Dynamic overlays override everything static.
-        if let overlays, overlays.winterBanActive {
+        // Dynamic overlays override everything static. The declared winter
+        // ban only prohibits parking 1–6 a.m. (HRM's posted hours); outside
+        // that window it becomes an advisory appended below.
+        let banDeclared = overlays?.winterBanActive ?? false
+        if banDeclared, (1..<6).contains(calendar.component(.hour, from: date)) {
             return Verdict(
                 level: .red,
                 headline: "Winter parking ban",
-                detail: overlays.winterBanMessage ?? "Overnight ban in effect — vehicles may be towed",
+                detail: overlays?.winterBanMessage ?? "Overnight ban in effect 1–6 a.m. — vehicles may be towed",
                 spoken: "Winter parking ban in effect. Do not park.",
                 isStale: stale
             )
@@ -94,42 +97,55 @@ struct RuleEngine {
         }
         if let loading = active.first(where: { $0.kind == .loadingZone }) {
             let limit = loading.timeLimitMinutes.map { "\($0) min" } ?? "commercial"
-            return Verdict(
+            return banAdvisory(Verdict(
                 level: .yellow,
                 headline: "Loading zone",
                 detail: "\(segment.streetName) · \(limit)",
                 spoken: loading.timeLimitMinutes.map { "Loading zone, \($0) minutes." } ?? "Loading zone.",
                 isStale: stale
-            )
+            ), banDeclared: banDeclared)
         }
         if let paid = active.first(where: { $0.kind == .paid }) {
             let until = paid.activeWindowEndMinute(at: date, calendar: calendar).map(clockString) ?? ""
             let zone = segment.zoneCode.map { "Zone \($0)" } ?? "Paid"
-            return Verdict(
+            return banAdvisory(Verdict(
                 level: .yellow,
                 headline: "Paid parking",
                 detail: "\(segment.streetName) · \(zone)" + (until.isEmpty ? "" : " · until \(until)"),
                 spoken: until.isEmpty ? "Paid parking." : "Paid parking until \(until).",
                 isStale: stale
-            )
+            ), banDeclared: banDeclared)
         }
         if let limited = active.first(where: { $0.kind == .timeLimited }), let limit = limited.timeLimitMinutes {
-            return Verdict(
+            return banAdvisory(Verdict(
                 level: .yellow,
                 headline: "\(limit) min limit",
                 detail: "\(segment.streetName) · free, \(limit) minute maximum",
                 spoken: "Free parking, \(limit) minute limit.",
                 isStale: stale
-            )
+            ), banDeclared: banDeclared)
         }
 
-        return Verdict(
-            level: .green,
-            headline: "Free parking",
-            detail: "\(segment.streetName) · no restrictions right now",
-            spoken: "Legal, no time limit.",
-            isStale: stale
+        return banAdvisory(
+            Verdict(
+                level: .green,
+                headline: "Free parking",
+                detail: "\(segment.streetName) · no restrictions right now",
+                spoken: "Legal, no time limit.",
+                isStale: stale
+            ),
+            banDeclared: banDeclared
         )
+    }
+
+    /// When a ban is declared but it's not yet 1 a.m., a parkable verdict
+    /// still needs to warn the driver they can't stay overnight.
+    private func banAdvisory(_ verdict: Verdict, banDeclared: Bool) -> Verdict {
+        guard banDeclared, verdict.level == .green || verdict.level == .yellow else { return verdict }
+        var updated = verdict
+        updated.detail += " · Winter ban tonight 1–6 a.m."
+        updated.spoken += " Winter ban tonight, 1 to 6 a.m."
+        return updated
     }
 
     func isStale(overlays: DynamicOverlays?, at date: Date) -> Bool {
