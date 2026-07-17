@@ -14,9 +14,10 @@ final class LocationService: NSObject, ObservableObject {
 
     private let manager = CLLocationManager()
 
-    /// Rough bounding box around zones B, C, H (downtown Halifax + Dartmouth
-    /// core). Cheap containment check — precise matching is SegmentMatcher's job.
-    private let coverageArea = (minLat: 44.630, maxLat: 44.680, minLon: -63.610, maxLon: -63.550)
+    /// Bounding box of the loaded rule data (plus margin), set by AppModel
+    /// once segments load; high-accuracy GPS runs only inside it. The default
+    /// covers downtown Halifax + Dartmouth until data arrives.
+    var coverageArea = (minLat: 44.630, maxLat: 44.680, minLon: -63.610, maxLon: -63.550)
 
     override init() {
         super.init()

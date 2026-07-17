@@ -52,7 +52,27 @@ final class AppModel: ObservableObject {
         segments = await repository.segments
         payStations = await repository.payStations
         overlays = await repository.overlays
+        updateCoverageArea()
         scheduleOverlayRefresh()
+    }
+
+    /// High-accuracy GPS should run wherever we actually have data — derive
+    /// the bounds from the loaded segments (~1 km margin) instead of a
+    /// hardcoded downtown box.
+    private func updateCoverageArea() {
+        let coords = segments.flatMap(\.polyline)
+        guard let first = coords.first else { return }
+        var bounds = (minLat: first.latitude, maxLat: first.latitude,
+                      minLon: first.longitude, maxLon: first.longitude)
+        for c in coords {
+            bounds.minLat = min(bounds.minLat, c.latitude)
+            bounds.maxLat = max(bounds.maxLat, c.latitude)
+            bounds.minLon = min(bounds.minLon, c.longitude)
+            bounds.maxLon = max(bounds.maxLon, c.longitude)
+        }
+        let margin = 0.01  // ≈1 km
+        locationService.coverageArea = (bounds.minLat - margin, bounds.maxLat + margin,
+                                        bounds.minLon - margin, bounds.maxLon + margin)
     }
 
     func startDrive() {
