@@ -67,6 +67,9 @@ targets:
       - path: ParkWellTests
     dependencies:
       - target: ParkWell
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
 
 schemes:
   ParkWell:
