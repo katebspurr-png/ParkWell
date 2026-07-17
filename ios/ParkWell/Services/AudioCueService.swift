@@ -5,7 +5,11 @@ import Foundation
 ///
 /// Ducking, not interruption: the session uses `.duckOthers` so the driver's
 /// music/podcast dips under the cue and comes right back — it is never paused.
-final class AudioCueService: NSObject {
+// @unchecked Sendable: the newer SDK's AVSpeechSynthesizerDelegate implies
+// Sendable. All mutable state here is touched only on the main queue —
+// announce() is called from the @MainActor AppModel, and the delegate
+// callbacks below hop to main before mutating.
+final class AudioCueService: NSObject, @unchecked Sendable {
     enum CueStyle: String, CaseIterable, Identifiable {
         case spoken
         case tone
@@ -123,12 +127,19 @@ final class AudioCueService: NSObject {
 
 extension AudioCueService: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        activeCues = max(0, activeCues - 1)
-        deactivateSessionIfIdle()
+        cueEnded()
     }
 
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
-        activeCues = max(0, activeCues - 1)
-        deactivateSessionIfIdle()
+        cueEnded()
+    }
+
+    private func cueEnded() {
+        // Delegate callbacks can arrive off-main; state stays main-only.
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.activeCues = max(0, self.activeCues - 1)
+            self.deactivateSessionIfIdle()
+        }
     }
 }
