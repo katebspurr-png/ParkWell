@@ -42,12 +42,13 @@ ITEMS = {
     "street_centerlines": "560fec412dd044b08ae52a8575a215d4",
 }
 
-# Street centerline scope: Regional Centre communities first (expand later by
-# adding community names). Excludes expressways (no street parking) and
-# private/military roads (not ours to make claims about).
+# Street centerline scope: all of HRM. (The original 'HALIFAX'/'DARTMOUTH'
+# community filter turned out to cover only the urban core — Bedford,
+# Sackville, Cole Harbour etc. are separate GSA names, which left the suburbs
+# blank.) Still excludes expressways (no street parking) and private/military
+# roads (not ours to make claims about).
 CENTERLINE_WHERE = (
-    "(GSA_LEFT IN ('HALIFAX','DARTMOUTH') OR GSA_RIGHT IN ('HALIFAX','DARTMOUTH'))"
-    " AND STR_STATUS='OPEN'"
+    "STR_STATUS='OPEN'"
     " AND (ST_CLASS IS NULL OR ST_CLASS <> 'EXPRESSWAY')"
     " AND (OWN IS NULL OR OWN NOT IN ('PRIV','DND'))"
 )
