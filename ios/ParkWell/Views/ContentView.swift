@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject private var model: AppModel
+    @AppStorage("hasSeenWelcome") private var hasSeenWelcome = false
+    @State private var showingWelcome = false
     @State private var showingScanner = false
     @State private var showingSettings = false
 
@@ -54,6 +56,15 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "gearshape")
                 }
+            }
+            .onAppear {
+                if !hasSeenWelcome {
+                    showingWelcome = true
+                    hasSeenWelcome = true
+                }
+            }
+            .sheet(isPresented: $showingWelcome) {
+                WelcomeView()
             }
             .sheet(isPresented: $showingScanner) {
                 SignScannerView()

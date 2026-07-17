@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject private var model: AppModel
     @Environment(\.dismiss) private var dismiss
+    @State private var showingWelcome = false
 
     var body: some View {
         NavigationStack {
@@ -19,6 +20,18 @@ struct SettingsView: View {
                     Text("Cues duck your music or podcast briefly — they never pause it.")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
+                }
+
+                Section("CarPlay") {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("See your parking status on the car screen")
+                        Text("Settings → General → CarPlay → your car → Live Activities")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
+                    Button("Show welcome tips again") {
+                        showingWelcome = true
+                    }
                 }
 
                 Section("Coverage") {
@@ -38,6 +51,9 @@ struct SettingsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button("Done") { dismiss() }
+            }
+            .sheet(isPresented: $showingWelcome) {
+                WelcomeView()
             }
         }
     }
