@@ -61,6 +61,8 @@ targets:
     settings:
       base:
         SKIP_INSTALL: true
+        # Extensions must be prefixed with the host app's full bundle ID.
+        PRODUCT_BUNDLE_IDENTIFIER: com.parkwell.ParkWell.ParkWellWidgets
 
   ParkWellTests:
     type: bundle.unit-test
