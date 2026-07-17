@@ -80,6 +80,10 @@ schemes:
     build:
       targets:
         ParkWell: all
+    run:
+      simulateLocation:
+        allow: true
+        defaultLocation: SimulatedDrives/BarringtonDrive.gpx
     test:
       targets:
         - ParkWellTests

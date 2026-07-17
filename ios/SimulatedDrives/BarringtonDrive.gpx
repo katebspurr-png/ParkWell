@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Simulated test drive for Xcode's location simulation (Debug ▸ Simulate
+  Location). Route: south on Barrington St from Duke St, through the seeded
+  Barrington segment, then west along Spring Garden Rd through its seeded
+  segment. Timestamps pace the drive at roughly 30 km/h; Xcode interpolates
+  between waypoints. Absolute dates are ignored — only the deltas matter.
+
+  Expected status flips (weekday daytime): Unmapped -> Paid parking
+  (Barrington, yellow) -> Unmapped -> Paid parking (Spring Garden, yellow;
+  red No stopping if run 7-9 a.m. on a weekday) -> Unmapped.
+-->
+<gpx version="1.1" creator="ParkWell" xmlns="http://www.topografix.com/GPX/1/1">
+  <wpt lat="44.6512" lon="-63.5713"><time>2026-07-17T12:00:00Z</time></wpt>
+  <wpt lat="44.6495" lon="-63.5719"><time>2026-07-17T12:00:20Z</time></wpt>
+  <wpt lat="44.6488" lon="-63.5722"><time>2026-07-17T12:00:28Z</time></wpt>
+  <wpt lat="44.6482" lon="-63.5725"><time>2026-07-17T12:00:35Z</time></wpt>
+  <wpt lat="44.6476" lon="-63.5728"><time>2026-07-17T12:00:42Z</time></wpt>
+  <wpt lat="44.6460" lon="-63.5734"><time>2026-07-17T12:01:00Z</time></wpt>
+  <wpt lat="44.6446" lon="-63.5738"><time>2026-07-17T12:01:16Z</time></wpt>
+  <wpt lat="44.6435" lon="-63.5755"><time>2026-07-17T12:01:35Z</time></wpt>
+  <wpt lat="44.6432" lon="-63.5772"><time>2026-07-17T12:01:50Z</time></wpt>
+  <wpt lat="44.6430" lon="-63.5790"><time>2026-07-17T12:02:05Z</time></wpt>
+  <wpt lat="44.6428" lon="-63.5805"><time>2026-07-17T12:02:20Z</time></wpt>
+  <!-- Linger at the end so the simulation doesn't cut out mid-demo. -->
+  <wpt lat="44.6428" lon="-63.5805"><time>2026-07-17T12:03:20Z</time></wpt>
+</gpx>
