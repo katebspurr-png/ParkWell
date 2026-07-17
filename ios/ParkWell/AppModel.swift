@@ -26,6 +26,7 @@ final class AppModel: ObservableObject {
 
     private var cancellables: Set<AnyCancellable> = []
     private var segments: [StreetSegment] = []
+    private var payStations: [PayStation] = []
     private var overlays: DynamicOverlays?
     private var overlayRefreshTask: Task<Void, Never>?
 
@@ -49,6 +50,7 @@ final class AppModel: ObservableObject {
         locationService.requestAuthorization()
         await repository.load()
         segments = await repository.segments
+        payStations = await repository.payStations
         overlays = await repository.overlays
         scheduleOverlayRefresh()
     }
@@ -71,7 +73,9 @@ final class AppModel: ObservableObject {
 
     private func handle(location: CLLocation) {
         let segment = matcher.nearestSegment(to: location.coordinate, in: segments)
-        let newVerdict = engine.verdict(segment: segment, overlays: overlays, at: Date())
+        let station = nearestPayStation(to: location, maxDistanceMeters: 120)
+        let newVerdict = engine.verdict(segment: segment, overlays: overlays,
+                                        nearestPayStation: station, at: Date())
 
         let changed = newVerdict.headline != verdict?.headline || newVerdict.level != verdict?.level
         currentSegment = segment
@@ -84,6 +88,16 @@ final class AppModel: ObservableObject {
         }
     }
 
+    private func nearestPayStation(to location: CLLocation, maxDistanceMeters: Double) -> PayStation? {
+        payStations
+            .map { station -> (PayStation, Double) in
+                let stationLocation = CLLocation(latitude: station.latitude, longitude: station.longitude)
+                return (station, location.distance(from: stationLocation))
+            }
+            .filter { $0.1 <= maxDistanceMeters }
+            .min { $0.1 < $1.1 }?.0
+    }
+
     /// The winter ban can flip mid-drive; poll the overlay every 15 minutes.
     private func scheduleOverlayRefresh() {
         overlayRefreshTask?.cancel()
@@ -93,6 +107,7 @@ final class AppModel: ObservableObject {
                 guard let self else { return }
                 await self.repository.refresh()
                 self.segments = await self.repository.segments
+                self.payStations = await self.repository.payStations
                 self.overlays = await self.repository.overlays
             }
         }

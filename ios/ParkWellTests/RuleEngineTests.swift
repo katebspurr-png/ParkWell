@@ -160,6 +160,18 @@ final class RuleEngineTests: XCTestCase {
         XCTAssertEqual(verdict.spoken, "Loading zone, 15 minutes.")
     }
 
+    // MARK: - Pay stations
+
+    func testPaidVerdictIncludesNearestPayStation() {
+        let now = date(2026, 7, 15, 10, 0)
+        let station = PayStation(id: UUID(), tid: "PS147", zoneCode: "C",
+                                 street: "Spring Garden", latitude: 44.643, longitude: -63.578)
+        let verdict = engine.verdict(segment: paidSegment(), overlays: freshOverlays(at: now),
+                                     nearestPayStation: station, at: now)
+        XCTAssertEqual(verdict.level, .yellow)
+        XCTAssertTrue(verdict.detail.contains("Pay station PS147"))
+    }
+
     // MARK: - Honesty about missing/stale data
 
     func testUnmappedSegmentIsUnknown() {

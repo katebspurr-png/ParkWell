@@ -120,7 +120,8 @@ def main() -> None:
     out.append("-- only source='hrm_arcgis' rows; manual data is untouched.\n")
     out.append("begin;")
     out.append("delete from street_segments where source = 'hrm_arcgis';")
-    out.append(f"delete from winter_ban_zones where city_code = {sql_str(CITY)};\n")
+    out.append(f"delete from winter_ban_zones where city_code = {sql_str(CITY)};")
+    out.append(f"delete from pay_stations where city_code = {sql_str(CITY)} and source = 'hrm_arcgis';\n")
 
     # ── Pay zone boundaries ─────────────────────────────────────────────
     print("Fetching pay zones…", file=sys.stderr)
@@ -227,15 +228,35 @@ def main() -> None:
             )
         print(f"  {len(feats)} polygon(s)", file=sys.stderr)
 
+    # ── Pay stations -> pay_stations table (+ GeoJSON mapping aid) ──────
+    print("Fetching pay stations…", file=sys.stderr)
+    stations = query_features(resolve_layer_url(ITEMS["pay_stations"]))
+    out.append("")
+    n_stations = 0
+    for feat in stations:
+        geometry = feat.get("geometry")
+        if not geometry or geometry["type"] != "Point":
+            continue
+        props = feat["properties"]
+        # ASSETSTAT 'INS' = installed; skip removed/planned stations.
+        if props.get("ASSETSTAT") and props["ASSETSTAT"] != "INS":
+            continue
+        lon, lat = geometry["coordinates"][:2]
+        out.append(
+            f"insert into pay_stations (city_code, tid, zone_code, street, latitude, longitude) values "
+            f"({sql_str(CITY)}, {sql_str(props.get('TID') or props.get('ASSETID'))}, "
+            f"{sql_str(props.get('PKNGZONE'))}, {sql_str(props.get('LOCATION'))}, "
+            f"{round(lat, 6)}, {round(lon, 6)});"
+        )
+        n_stations += 1
+    print(f"  {n_stations} pay stations", file=sys.stderr)
+
     out.append("\ncommit;")
 
     SQL_OUT.parent.mkdir(parents=True, exist_ok=True)
     SQL_OUT.write_text("\n".join(out) + "\n")
     print(f"Wrote {SQL_OUT} ({len(out)} statements)", file=sys.stderr)
 
-    # ── Pay stations: mapping aid, saved as GeoJSON (not imported) ──────
-    print("Fetching pay stations…", file=sys.stderr)
-    stations = query_features(resolve_layer_url(ITEMS["pay_stations"]))
     STATIONS_OUT.write_text(json.dumps(
         {"type": "FeatureCollection", "features": stations}, indent=1
     ))

@@ -12,6 +12,7 @@ actor RulesRepository {
     private let session: URLSession
 
     private(set) var segments: [StreetSegment] = []
+    private(set) var payStations: [PayStation] = []
     private(set) var overlays: DynamicOverlays?
 
     init(baseURL: URL = Config.supabaseURL, anonKey: String = Config.supabaseAnonKey, session: URLSession = .shared) {
@@ -29,8 +30,10 @@ actor RulesRepository {
 
     func refresh() async {
         async let fetchedSegments = fetchSegments()
+        async let fetchedStations = fetchPayStations()
         async let fetchedOverlays = fetchOverlays()
         if let s = try? await fetchedSegments { segments = s }
+        if let p = try? await fetchedStations { payStations = p }
         if let o = try? await fetchedOverlays { overlays = o }
         saveToCache()
     }
@@ -39,6 +42,11 @@ actor RulesRepository {
 
     private func fetchSegments() async throws -> [StreetSegment] {
         let rows: [SegmentRow] = try await get("street_segments", query: "select=*,segment_rules(*)")
+        return rows.map { $0.toModel() }
+    }
+
+    private func fetchPayStations() async throws -> [PayStation] {
+        let rows: [PayStationRow] = try await get("pay_stations", query: "select=*")
         return rows.map { $0.toModel() }
     }
 
@@ -92,6 +100,7 @@ actor RulesRepository {
 
     private struct CachePayload: Codable {
         var segments: [StreetSegment]
+        var payStations: [PayStation]?
         var overlays: DynamicOverlays?
     }
 
@@ -99,11 +108,13 @@ actor RulesRepository {
         guard let data = try? Data(contentsOf: cacheURL),
               let payload = try? JSONDecoder().decode(CachePayload.self, from: data) else { return }
         segments = payload.segments
+        payStations = payload.payStations ?? []
         overlays = payload.overlays  // fetchedAt survives, so staleness stays honest
     }
 
     private func saveToCache() {
-        guard let data = try? JSONEncoder().encode(CachePayload(segments: segments, overlays: overlays)) else { return }
+        let payload = CachePayload(segments: segments, payStations: payStations, overlays: overlays)
+        guard let data = try? JSONEncoder().encode(payload) else { return }
         try? data.write(to: cacheURL, options: .atomic)
     }
 }
@@ -156,6 +167,20 @@ private struct SegmentRow: Decodable {
                 )
             }
         )
+    }
+}
+
+private struct PayStationRow: Decodable {
+    var id: UUID
+    var tid: String
+    var zoneCode: String?
+    var street: String?
+    var latitude: Double
+    var longitude: Double
+
+    func toModel() -> PayStation {
+        PayStation(id: id, tid: tid, zoneCode: zoneCode, street: street,
+                   latitude: latitude, longitude: longitude)
     }
 }
 

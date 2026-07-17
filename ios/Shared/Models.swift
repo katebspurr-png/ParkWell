@@ -90,6 +90,17 @@ struct StreetCleaningEntry: Codable, Hashable {
     var endMinute: Int
 }
 
+/// An on-street pay station. Surfaced on paid verdicts so the driver has the
+/// station number ready for the HotSpot payment app.
+struct PayStation: Codable, Hashable, Identifiable {
+    var id: UUID
+    var tid: String
+    var zoneCode: String?
+    var street: String?
+    var latitude: Double
+    var longitude: Double
+}
+
 /// The dynamic overlay layer — changes daily/seasonally, fetched live.
 struct DynamicOverlays: Codable, Hashable {
     var winterBanActive: Bool

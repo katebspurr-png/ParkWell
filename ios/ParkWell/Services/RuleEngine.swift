@@ -29,7 +29,8 @@ struct RuleEngine {
         self.calendar = calendar
     }
 
-    func verdict(segment: StreetSegment?, overlays: DynamicOverlays?, at date: Date) -> Verdict {
+    func verdict(segment: StreetSegment?, overlays: DynamicOverlays?,
+                 nearestPayStation: PayStation? = nil, at date: Date) -> Verdict {
         let stale = isStale(overlays: overlays, at: date)
 
         guard let segment else {
@@ -108,10 +109,14 @@ struct RuleEngine {
         if let paid = active.first(where: { $0.kind == .paid }) {
             let until = paid.activeWindowEndMinute(at: date, calendar: calendar).map(clockString) ?? ""
             let zone = segment.zoneCode.map { "Zone \($0)" } ?? "Paid"
+            var detail = "\(segment.streetName) · \(zone)" + (until.isEmpty ? "" : " · until \(until)")
+            if let station = nearestPayStation {
+                detail += " · Pay station \(station.tid)"
+            }
             return banAdvisory(Verdict(
                 level: .yellow,
                 headline: "Paid parking",
-                detail: "\(segment.streetName) · \(zone)" + (until.isEmpty ? "" : " · until \(until)"),
+                detail: detail,
                 spoken: until.isEmpty ? "Paid parking." : "Paid parking until \(until).",
                 isStale: stale
             ), banDeclared: banDeclared)
