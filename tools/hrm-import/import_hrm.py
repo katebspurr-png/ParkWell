@@ -39,7 +39,18 @@ ITEMS = {
     "pay_stations": "a4b02c8ea43c436badd41ab82bcceed2",
     "winter_ban_zone1": "236a966107a24dd3a13f1f254a5afd74",
     "winter_ban_zone2": "ef3b5ed0b7db4517bcdbe3a1e5dd7814",
+    "street_centerlines": "560fec412dd044b08ae52a8575a215d4",
 }
+
+# Street centerline scope: Regional Centre communities first (expand later by
+# adding community names). Excludes expressways (no street parking) and
+# private/military roads (not ours to make claims about).
+CENTERLINE_WHERE = (
+    "(GSA_LEFT IN ('HALIFAX','DARTMOUTH') OR GSA_RIGHT IN ('HALIFAX','DARTMOUTH'))"
+    " AND STR_STATUS='OPEN'"
+    " AND (ST_CLASS IS NULL OR ST_CLASS <> 'EXPRESSWAY')"
+    " AND (OWN IS NULL OR OWN NOT IN ('PRIV','DND'))"
+)
 
 CITY = "hfx"
 NAMESPACE = uuid.uuid5(uuid.NAMESPACE_URL, "parkwell.hrm_arcgis")
@@ -66,14 +77,14 @@ def resolve_layer_url(item_id: str) -> str:
     return f"{service_url}/{layer_id}"
 
 
-def query_features(layer_url: str) -> list[dict]:
+def query_features(layer_url: str, where: str = "1=1") -> list[dict]:
     """Query all features as GeoJSON (WGS84 lon/lat), paginating."""
     features: list[dict] = []
     offset = 0
     page = 1000
     while True:
         params = urlencode({
-            "where": "1=1",
+            "where": where,
             "outFields": "*",
             "outSR": 4326,
             "f": "geojson",
@@ -86,6 +97,24 @@ def query_features(layer_url: str) -> list[dict]:
         if len(batch) < page:
             return features
         offset += len(batch)
+
+
+def path_midpoint(path: list) -> tuple[float, float]:
+    """(lat, lon) midpoint-ish of a GeoJSON [lon, lat] path."""
+    lon, lat = path[len(path) // 2]
+    return lat, lon
+
+
+def approx_distance_m(a: tuple[float, float], b: tuple[float, float]) -> float:
+    """Equirectangular distance, fine at city scale."""
+    import math
+    lat_m = (a[0] - b[0]) * 111_320
+    lon_m = (a[1] - b[1]) * 111_320 * math.cos(math.radians(a[0]))
+    return (lat_m * lat_m + lon_m * lon_m) ** 0.5
+
+
+def street_title(name: str | None) -> str | None:
+    return name.strip().title() if name and name.strip() else None
 
 
 def sql_str(value) -> str:
@@ -139,6 +168,29 @@ def main() -> None:
         )
     print(f"  {len(zones)} zone polygons", file=sys.stderr)
 
+    # ── Street centerlines (fetched early: also names the permit streets) ─
+    print("Fetching street centerlines (Regional Centre)…", file=sys.stderr)
+    centerlines = query_features(resolve_layer_url(ITEMS["street_centerlines"]), where=CENTERLINE_WHERE)
+    # (midpoint, display name) lookup for the spatial join below.
+    centerline_index = []
+    for feat in centerlines:
+        name = street_title(feat["properties"].get("FULL_NAME"))
+        if not name:
+            continue
+        for path in line_paths(feat.get("geometry")):
+            if len(path) >= 2:
+                centerline_index.append((path_midpoint(path), name))
+    print(f"  {len(centerlines)} centerline segments", file=sys.stderr)
+
+    def nearest_street_name(path: list, max_meters: float = 60) -> str | None:
+        mid = path_midpoint(path)
+        best_name, best_d = None, max_meters
+        for cl_mid, cl_name in centerline_index:
+            d = approx_distance_m(mid, cl_mid)
+            if d < best_d:
+                best_name, best_d = cl_name, d
+        return best_name
+
     # ── Commuter/permit parking streets -> segments + permit_only ───────
     print("Fetching permit parking streets…", file=sys.stderr)
     streets = query_features(resolve_layer_url(ITEMS["commuter_permit_streets"]))
@@ -155,7 +207,7 @@ def main() -> None:
             seg_id = stable_id(source_id)
             rule_id = stable_id(source_id + ":rule")
             polyline = json.dumps(latlon_polyline(path), separators=(",", ":"))
-            name = f"Permit street {ppid}"
+            name = nearest_street_name(path) or f"Permit street {ppid}"
             note = (
                 f"HRM permit parking ({ppid})"
                 + (", commuter permits eligible" if commuter else "")
@@ -213,6 +265,28 @@ def main() -> None:
         )
         n_spots += 1
     print(f"  {n_spots} accessible spot segments", file=sys.stderr)
+
+    # ── Centerlines -> unverified "likely OK" segments ──────────────────
+    out.append("")
+    n_centerline = 0
+    for feat in centerlines:
+        props = feat["properties"]
+        name = street_title(props.get("FULL_NAME"))
+        if not name:
+            continue
+        asset = props.get("ASSETID") or f"OBJ{props.get('OBJECTID')}"
+        for i, path in enumerate(line_paths(feat.get("geometry"))):
+            if len(path) < 2:
+                continue
+            source_id = f"centerline:{asset}:{i}"
+            polyline = json.dumps(latlon_polyline(path), separators=(",", ":"))
+            out.append(
+                f"insert into street_segments (id, city_code, zone_code, street_name, side, polyline, source, source_id, verified) values "
+                f"({sql_str(stable_id(source_id))}, {sql_str(CITY)}, null, {sql_str(name)}, 'both', "
+                f"{sql_str(polyline)}::jsonb, 'hrm_arcgis', {sql_str(source_id)}, false);"
+            )
+            n_centerline += 1
+    print(f"  {n_centerline} unverified centerline segments", file=sys.stderr)
 
     # ── Winter ban zones ────────────────────────────────────────────────
     out.append("")

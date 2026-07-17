@@ -5,14 +5,20 @@ import Foundation
 
 /// The single glanceable state shown in the Live Activity and spoken aloud.
 enum StatusLevel: String, Codable, Hashable {
-    /// Legal to park right now.
+    /// Legal to park right now (verified rules).
     case green
+    /// No restrictions on record, but unverified — NS street parking is legal
+    /// by default, so this is the honest prior. Rendered pale green.
+    case likelyFree = "likely_free"
     /// Legal with a condition — paid, time-limited, loading zone.
     case yellow
     /// Do not park — no-stopping, permit-only, accessible, winter ban.
     case red
     /// Unmapped segment or data too stale to trust. Never fake confidence.
     case unknown
+
+    /// Levels a driver can act on as "you can park here".
+    var isParkable: Bool { self == .green || self == .likelyFree }
 }
 
 enum RuleKind: String, Codable, Hashable {
@@ -80,6 +86,11 @@ struct StreetSegment: Codable, Hashable, Identifiable {
     var side: String
     var polyline: [Coordinate]
     var rules: [ParkingRule]
+    /// nil (legacy data) means verified. Centerline imports are unverified —
+    /// they carry geometry and a name but no confirmed rules.
+    var verified: Bool?
+
+    var isVerified: Bool { verified ?? true }
 }
 
 struct StreetCleaningEntry: Codable, Hashable {

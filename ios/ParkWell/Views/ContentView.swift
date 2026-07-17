@@ -13,6 +13,12 @@ struct ContentView: View {
             VStack(spacing: 24) {
                 StatusBannerView(verdict: model.verdict)
 
+                if let suggestion = model.suggestion {
+                    Label(suggestion, systemImage: "arrow.turn.up.right")
+                        .font(.subheadline.weight(.medium))
+                        .foregroundStyle(.green)
+                }
+
                 if model.verdict?.isStale == true {
                     Label("Rule data hasn't refreshed recently — trust the posted signs.",
                           systemImage: "exclamationmark.triangle")

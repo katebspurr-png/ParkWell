@@ -12,6 +12,9 @@ import Foundation
 final class AppModel: ObservableObject {
     @Published private(set) var verdict: Verdict?
     @Published private(set) var currentSegment: StreetSegment?
+    /// "Likely parking ~200 m away on Maynard St" — set when the current
+    /// street isn't parkable and a nearby one is.
+    @Published private(set) var suggestion: String?
     @Published private(set) var isDriving = false
     @Published var cueStyleRaw: String {
         didSet { UserDefaults.standard.set(cueStyleRaw, forKey: "cueStyle") }
@@ -92,10 +95,21 @@ final class AppModel: ObservableObject {
     // MARK: - Pipeline
 
     private func handle(location: CLLocation) {
+        let now = Date()
         let segment = matcher.nearestSegment(to: location.coordinate, in: segments)
         let station = nearestPayStation(to: location, maxDistanceMeters: 120)
-        let newVerdict = engine.verdict(segment: segment, overlays: overlays,
-                                        nearestPayStation: station, at: Date())
+        var newVerdict = engine.verdict(segment: segment, overlays: overlays,
+                                        nearestPayStation: station, at: now)
+
+        // "Closest right now": when you can't park here, point at the nearest
+        // street where you likely can.
+        let nearby = newVerdict.level.isParkable
+            ? nil
+            : nearestParkableStreet(to: location, excluding: segment?.streetName, at: now)
+        suggestion = nearby.map { "Likely parking ~\($0.meters) m away on \($0.name)" }
+        if let nearby, newVerdict.level == .red {
+            newVerdict.spoken += " Nearest likely parking: \(nearby.name), about \(nearby.meters) meters."
+        }
 
         let changed = newVerdict.headline != verdict?.headline || newVerdict.level != verdict?.level
         currentSegment = segment
@@ -106,6 +120,21 @@ final class AppModel: ObservableObject {
         if changed {
             audio.announce(newVerdict, style: cueStyle)
         }
+    }
+
+    private func nearestParkableStreet(to location: CLLocation, excluding streetName: String?,
+                                       at date: Date) -> (name: String, meters: Int)? {
+        var best: (name: String, distance: Double)?
+        for segment in segments {
+            guard segment.streetName != streetName else { continue }
+            guard let d = matcher.distance(from: location.coordinate, toPolyline: segment.polyline),
+                  d > 25, d < 500, d < (best?.distance ?? .infinity) else { continue }
+            guard engine.verdict(segment: segment, overlays: overlays, at: date).level.isParkable else { continue }
+            best = (segment.streetName, d)
+        }
+        guard let best else { return nil }
+        // Round to 50 m — GPS and polyline precision don't support better.
+        return (best.name, max(50, Int((best.distance / 50).rounded() * 50)))
     }
 
     private func nearestPayStation(to location: CLLocation, maxDistanceMeters: Double) -> PayStation? {

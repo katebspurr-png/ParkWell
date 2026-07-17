@@ -54,6 +54,7 @@ struct ParkingLiveActivity: Widget {
     private func shortLabel(_ level: StatusLevel) -> String {
         switch level {
         case .green: return "PARK"
+        case .likelyFree: return "OK?"
         case .yellow: return "PAID"
         case .red: return "NO"
         case .unknown: return "?"
@@ -63,6 +64,7 @@ struct ParkingLiveActivity: Widget {
     private func color(for level: StatusLevel) -> Color {
         switch level {
         case .green: return .green
+        case .likelyFree: return .green.opacity(0.55)
         case .yellow: return .yellow
         case .red: return .red
         case .unknown: return .gray
@@ -103,6 +105,7 @@ private struct LockScreenView: View {
     private var color: Color {
         switch state.level {
         case .green: return .green
+        case .likelyFree: return .green.opacity(0.55)
         case .yellow: return .yellow
         case .red: return .red
         case .unknown: return .gray
@@ -112,6 +115,7 @@ private struct LockScreenView: View {
     private var symbol: String {
         switch state.level {
         case .green: return "checkmark"
+        case .likelyFree: return "checkmark"
         case .yellow: return "dollarsign"
         case .red: return "xmark"
         case .unknown: return "questionmark"

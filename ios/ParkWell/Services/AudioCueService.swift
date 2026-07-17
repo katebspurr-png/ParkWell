@@ -82,7 +82,7 @@ final class AudioCueService: NSObject, @unchecked Sendable {
         let frequency: Double
         let pulses: Int
         switch level {
-        case .green: frequency = 880; pulses = 1
+        case .green, .likelyFree: frequency = 880; pulses = 1
         case .yellow: frequency = 660; pulses = 1
         case .red: frequency = 440; pulses = 2
         case .unknown: frequency = 550; pulses = 1

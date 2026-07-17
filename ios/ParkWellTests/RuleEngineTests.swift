@@ -1,3 +1,4 @@
+import CoreLocation
 import XCTest
 @testable import ParkWell
 
@@ -170,6 +171,43 @@ final class RuleEngineTests: XCTestCase {
                                      nearestPayStation: station, at: now)
         XCTAssertEqual(verdict.level, .yellow)
         XCTAssertTrue(verdict.detail.contains("Pay station PS147"))
+    }
+
+    // MARK: - Unverified centerline segments
+
+    private func centerlineSegment() -> StreetSegment {
+        StreetSegment(
+            id: UUID(), zoneCode: nil, streetName: "Maynard St", side: "both",
+            polyline: [Coordinate(latitude: 44.6550, longitude: -63.5850),
+                       Coordinate(latitude: 44.6558, longitude: -63.5846)],
+            rules: [], verified: false
+        )
+    }
+
+    func testUnverifiedSegmentIsLikelyFree() {
+        let now = date(2026, 7, 15, 10, 0)
+        let verdict = engine.verdict(segment: centerlineSegment(), overlays: freshOverlays(at: now), at: now)
+        XCTAssertEqual(verdict.level, .likelyFree)
+        XCTAssertEqual(verdict.headline, "Likely OK")
+        XCTAssertTrue(verdict.detail.contains("check signs"))
+    }
+
+    func testUnverifiedSegmentStillRedDuringWinterBan() {
+        let now = date(2026, 1, 14, 2, 0)
+        let verdict = engine.verdict(segment: centerlineSegment(),
+                                     overlays: freshOverlays(banActive: true, at: now), at: now)
+        XCTAssertEqual(verdict.level, .red)
+    }
+
+    func testMatcherPrefersRuleBearingSegmentOverCenterline() {
+        // A permit street and a bare centerline tracing the same block: the
+        // rule-bearing one must win even if the centerline is a hair closer.
+        var permit = paidSegment()
+        permit.polyline = centerlineSegment().polyline
+        let matcher = SegmentMatcher()
+        let here = CLLocationCoordinate2D(latitude: 44.6554, longitude: -63.5849)
+        let match = matcher.nearestSegment(to: here, in: [centerlineSegment(), permit])
+        XCTAssertEqual(match?.id, permit.id)
     }
 
     // MARK: - Honesty about missing/stale data

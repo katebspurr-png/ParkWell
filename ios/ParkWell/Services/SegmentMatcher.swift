@@ -8,14 +8,22 @@ struct SegmentMatcher {
     var maxDistanceMeters: Double = 30
 
     func nearestSegment(to location: CLLocationCoordinate2D, in segments: [StreetSegment]) -> StreetSegment? {
-        var best: (segment: StreetSegment, distance: Double)?
+        // Rule-bearing segments (permit streets, paid blocks, hand-mapped)
+        // win over bare centerlines: they often trace the same street, and
+        // the one with actual rules is the meaningful match.
+        var bestRuled: (segment: StreetSegment, distance: Double)?
+        var bestAny: (segment: StreetSegment, distance: Double)?
         for segment in segments {
-            guard let d = distance(from: location, toPolyline: segment.polyline) else { continue }
-            if d <= maxDistanceMeters, d < (best?.distance ?? .infinity) {
-                best = (segment, d)
+            guard let d = distance(from: location, toPolyline: segment.polyline),
+                  d <= maxDistanceMeters else { continue }
+            if d < (bestAny?.distance ?? .infinity) {
+                bestAny = (segment, d)
+            }
+            if !segment.rules.isEmpty, d < (bestRuled?.distance ?? .infinity) {
+                bestRuled = (segment, d)
             }
         }
-        return best?.segment
+        return bestRuled?.segment ?? bestAny?.segment
     }
 
     /// Minimum distance in meters from a point to a polyline, using a local

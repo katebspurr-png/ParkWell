@@ -32,6 +32,7 @@ struct StatusBannerView: View {
     private var color: Color {
         switch verdict?.level {
         case .green: return .green
+        case .likelyFree: return .green.opacity(0.55)
         case .yellow: return .yellow
         case .red: return .red
         case .unknown, nil: return .gray
@@ -41,6 +42,7 @@ struct StatusBannerView: View {
     private var symbol: String {
         switch verdict?.level {
         case .green: return "checkmark"
+        case .likelyFree: return "checkmark"
         case .yellow: return "dollarsign"
         case .red: return "xmark"
         case .unknown, nil: return "questionmark"

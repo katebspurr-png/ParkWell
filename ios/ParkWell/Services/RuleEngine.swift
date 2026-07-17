@@ -131,12 +131,26 @@ struct RuleEngine {
             ), banDeclared: banDeclared)
         }
 
+        if segment.isVerified {
+            return banAdvisory(
+                Verdict(
+                    level: .green,
+                    headline: "Free parking",
+                    detail: "\(segment.streetName) · no restrictions right now",
+                    spoken: "Legal, no time limit.",
+                    isStale: stale
+                ),
+                banDeclared: banDeclared
+            )
+        }
+        // Unverified centerline segment: no rules on record. NS street parking
+        // is legal by default, so claim "likely OK" — never a confident green.
         return banAdvisory(
             Verdict(
-                level: .green,
-                headline: "Free parking",
-                detail: "\(segment.streetName) · no restrictions right now",
-                spoken: "Legal, no time limit.",
+                level: .likelyFree,
+                headline: "Likely OK",
+                detail: "\(segment.streetName) · no restrictions on record — check signs",
+                spoken: "Likely okay. No restrictions on record.",
                 isStale: stale
             ),
             banDeclared: banDeclared
@@ -146,7 +160,9 @@ struct RuleEngine {
     /// When a ban is declared but it's not yet 1 a.m., a parkable verdict
     /// still needs to warn the driver they can't stay overnight.
     private func banAdvisory(_ verdict: Verdict, banDeclared: Bool) -> Verdict {
-        guard banDeclared, verdict.level == .green || verdict.level == .yellow else { return verdict }
+        guard banDeclared,
+              verdict.level == .green || verdict.level == .likelyFree || verdict.level == .yellow
+        else { return verdict }
         var updated = verdict
         updated.detail += " · Winter ban tonight 1–6 a.m."
         updated.spoken += " Winter ban tonight, 1 to 6 a.m."

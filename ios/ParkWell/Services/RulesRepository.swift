@@ -41,7 +41,20 @@ actor RulesRepository {
     // MARK: - Network
 
     private func fetchSegments() async throws -> [StreetSegment] {
-        let rows: [SegmentRow] = try await get("street_segments", query: "select=*,segment_rules(*)")
+        // ~7k rows after the centerline import; PostgREST caps a single
+        // response at 1000, so page through.
+        var rows: [SegmentRow] = []
+        let page = 1000
+        var offset = 0
+        while true {
+            let batch: [SegmentRow] = try await get(
+                "street_segments",
+                query: "select=*,segment_rules(*)&order=id&limit=\(page)&offset=\(offset)"
+            )
+            rows += batch
+            if batch.count < page { break }
+            offset += batch.count
+        }
         return rows.map { $0.toModel() }
     }
 
@@ -143,6 +156,7 @@ private struct SegmentRow: Decodable {
     var side: String
     var polyline: [[Double]]  // [[lat, lon], ...]
     var segmentRules: [RuleRow]?
+    var verified: Bool?
 
     func toModel() -> StreetSegment {
         StreetSegment(
@@ -165,7 +179,8 @@ private struct SegmentRow: Decodable {
                     timeLimitMinutes: row.timeLimitMinutes,
                     note: row.note
                 )
-            }
+            },
+            verified: verified
         )
     }
 }

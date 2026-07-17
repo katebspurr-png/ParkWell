@@ -67,8 +67,9 @@ struct CoverageMapView: View {
     }
 
     private var legend: some View {
-        HStack(spacing: 14) {
+        HStack(spacing: 12) {
             legendDot(.green, "Park")
+            legendDot(.green.opacity(0.45), "Likely OK")
             legendDot(.yellow, "Paid/limited")
             legendDot(.red, "No")
             legendDot(.purple, "Pay station")
@@ -90,6 +91,7 @@ struct CoverageMapView: View {
     private func color(for level: StatusLevel) -> Color {
         switch level {
         case .green: return .green
+        case .likelyFree: return .green.opacity(0.45)
         case .yellow: return .yellow
         case .red: return .red
         case .unknown: return .gray
